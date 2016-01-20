@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="狮子座，产品经理型设计师，猴妈">
+    <meta name="keyword"  content="曾沙">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>三天两夜厦门“赶场”游 - 曾 沙</title>
+
+    <link rel="canonical" href="http://1z1b.com/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/05/31/travel-of-xiamen/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">曾 沙</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Stop 'touchstart' from $collapse propagating to document 
+     */
+    $collapse.addEventListener('touchstart', function(e){
+        e.stopPropagation();
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     */
+    document.addEventListener('touchstart', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#厦门" title="厦门">厦门</a>
+                        
+                        <a class="tag" href="/tags/#我和佩" title="我和佩">我和佩</a>
+                        
+                        <a class="tag" href="/tags/#旅游" title="旅游">旅游</a>
+                        
+                    </div>
+                    <h1>三天两夜厦门“赶场”游</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by Summer on May 31, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<h2 id="section">5月24日，星期五，晴</h2>
+
+<p>6点半起床，7点50集合，8点出发。天气很不错，阳光明媚，白云飘飘。</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1060.jpg" alt="天空晴朗" /> 天空晴朗</p>
+
+<p>先试试借来的单反，佩佩同学以后我就是你得御用摄影师了～很喜欢这种光线下的感觉吧。</p>
+
+<p><img src="/wp-content/uploads/2013/05/佩.jpg" alt="佩" /> 佩同学</p>
+
+<p>最喜欢这张了，手机拍的。此妹子单身哦，有意者留言给我吧。</p>
+
+<p><img src="/wp-content/uploads/2013/05/2013-05-24_08-26-30_103946_org.jpg" alt="2013-05-24_08-26-30_103946_org" /> 佩</p>
+
+<p>沿途风景风景很不错了，不过大部分时间在补觉觉～</p>
+
+<p><img src="/wp-content/uploads/2013/05/沿途风景.jpg" alt="沿途风景" /> 沿途风景</p>
+
+<p>8个多小时后，也就是下午四点多我们到达第一个目的地——集美学村。经过龙舟池，有人在划龙舟，据说明天这里会有比赛。</p>
+
+<p><img src="/wp-content/uploads/2013/05/20130524_182935.jpg" alt="用手机拍的龙舟湖全景图" /> 用手机拍的龙舟湖全景图</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1086.jpg" alt="注意，这有一船的妹子哦" /> 注意，这有一船的妹子哦</p>
+
+<p>接着来到陈嘉庚先生故居，里面没有进去，只是在外面看了一下。</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1100.jpg" alt="归来堂" /> 归来堂——遂陈嘉庚先生遗愿让海外子孙归来是有聚会的地方</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1114.jpg" alt="陈嘉庚先生故居" /> 陈嘉庚先生故居</p>
+
+<p>时间很紧，马上得去吃晚餐，在“海上餐厅”。“海上餐厅”这名字一听就很高档，到那才知道只是干涸的水上建起来的餐厅，挺失望的！特别是吃了他们一顿饭后，深刻的意识到什么是团餐。</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1120.jpg" alt=" 海上餐厅现在的海" /> 海上餐厅现在的海</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1122.jpg" alt="海上餐厅" /> 海上餐厅，很多人</p>
+
+<p>饭后，得准备回酒店了，再上几张自拍互拍照。</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1105.jpg" alt="归来堂一侧的巷子" /> 归来堂一侧的巷子</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1117.jpg" alt="我们就是跟着这个姑娘混到厦门的" /> 我们就是跟着这个姑娘混到厦门的，感谢她让我和佩同学成为她的家属</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1128.jpg" alt="这样的道儿充满了岁月的痕迹" /> 这样的道儿充满了岁月的痕迹</p>
+
+<p>到酒店发现一个特别有意思的事情，有图有真相。</p>
+
+<p><img src="/wp-content/uploads/2013/05/20130524_213807.jpg" alt="酒店的电梯" /> 酒店的电梯</p>
+
+<p>最开始我还以为电梯出问题了，怎么可能从3楼直接到了7楼,然后又从7楼上到5楼。后来才明白厦门人似乎很讨厌4喜欢7,之后更证实了我这个想法，酒店从3楼直接到5楼,各种末位带7的手机号码作为吉利号码贴在墙上。</p>
+
+<h2 id="section-1">5月26日，星期五，晴</h2>
+
+<p>6点半，酒店电话叫起床，经过晚上空调加蚊子的折磨，倍显疲惫哈。不过，我们是很有原则的，只多睡5分钟，呼～。</p>
+
+<p>7点半出发去南普陀寺和厦门大学。南普陀寺人很多，有各种菩萨供人们祈福。我也拜了几个，其余的心里祈祷祈祷就行了。很喜欢那些屋顶彩陶的装饰。</p>
+
+<p><img src="/wp-content/uploads/2013/05/南普陀寺1.jpg" alt="南普陀寺－石雕" /> 南普陀寺－石雕、彩陶装饰</p>
+
+<p><img src="/wp-content/uploads/2013/05/南普陀寺2.jpg" alt="南普陀寺－拜佛" /> 南普陀寺－拜佛</p>
+
+<p>下一站，美丽的厦大。好想找找那个“雷阵雨”的电视剧都到哪取景了。</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1182.jpg" alt="总得拍个门，不然好像没来过似得" /> 好像总得拍个门，不然好像没来过似的</p>
+
+<p>我们从厦大西门进入，左边就是建文楼，很漂亮的雕刻。然后我们到了芙蓉湖那一带。</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1186.jpg" alt="建文楼" /> 建文楼</p>
+
+<p><img src="/wp-content/uploads/2013/05/厦大.jpg" alt="厦大风光" /> 厦大风光</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1212.jpg" alt="谈情说爱的地方怎么少得了俊男靓女" /> 谈情说爱的地方怎么少得了俊男靓女</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1200.jpg" alt="更多的是——美女" /> 当然更多的是——美女！</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1191.jpg" alt="背影美女" /> 背影美女一枚</p>
+
+<p>时间太短了，我们只逛了厦大的一个角落，然后大吼着“下次一定再来”地离开了。真受不了这么赶！</p>
+
+<p>又到了吃饭时间，怎么老吃饭呀？！这是我们吃饭的地方，对面有一座很不协调的屋子，沧桑！</p>
+
+<p><img src="/wp-content/uploads/2013/05/20130525_112226.jpg" alt="厦门这样的老房子很快就会被拆掉的吧" /> 厦门这样的老房子很快就会被拆掉的吧</p>
+
+<p>下午，第一站——钟鼓索道，1000多米的索道，来回三四十分钟。可以看到大半个厦门——高楼、丛林、岛屿和海洋。</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1243.jpg" alt="守索道的大叔，很有型的胡子" /> 这是守索道的大叔吧，很有型的胡子</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1255.jpg" alt="钟鼓山索道下面是钟鼓山隧道，有意思" /> 钟鼓山索道下面是钟鼓山隧道，有意思</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1328.jpg" alt="远处美好的景色完全被我拍暴了，处理一下勉强看看吧" /> 远处美好的景色完全被我拍暴了，处理一下勉强看看吧</p>
+
+<p>下一站，最期待的鼓浪屿。做环岛轮船到达鼓浪屿。期间拍了很多海景，基本上都因为我太菜不会设置相机被爆掉了，气死我了。</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1371.jpg" alt="郑大人我对不起你" /> 郑大人，我对不起你</p>
+
+<p>上岛后，一路听导游在介绍这儿那儿的，其实我的心已经飞向那些小吃街。机缘巧合，我和佩误打误撞走进那些吃货集中营。不过只吃了花生卷冰淇淋和烤鱿鱼就赶着和大部队集合去了，让我们这些吃货情以何堪，还有岛上好多好多地方都没去——下次一定要来慢慢逛！</p>
+
+<p><img src="/wp-content/uploads/2013/05/好家伙.jpg" alt="好家伙——都不认识" /> 好家伙——都不认识</p>
+
+<p><img src="/wp-content/uploads/2013/05/我和佩.jpg" alt="我和佩——我们怎么没有合照呀～" /> 我和佩——我们怎么没有合照呀？！只能这样了</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1451.jpg" alt="老是看美女多没意思，奉上三枚帅哥" /> 老是看美女多没意思，奉上三枚帅哥</p>
+
+<p>这不，集合拍照后又得坐轮渡回厦门岛，晚上继续逛中山路。好多把多的人呀！</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1497.jpg" alt="中山路" /> 中山路</p>
+
+<p>果然相当热闹，有点深圳东门的感觉。先来杯张三疯奶茶，主道上各种特产店，于是乎有了下面这些收获，准备带回去的。</p>
+
+<p><img src="/wp-content/uploads/2013/05/20130525_204332.jpg" alt="牛轧糖／辣鱼干／桂圆干／肉松／榴莲糖" /> 牛轧糖／辣鱼干／桂圆干／肉松／榴莲糖</p>
+
+<p>后面拐进一条小吃街，吃了转角遇到爱的蚵仔煎，大肠包小肠，沙茶面，生蚝。看起来都是不错的～～</p>
+
+<p><img src="/wp-content/uploads/2013/05/好吃的.jpg" alt="看起来不错的好吃的" /> 看起来不错的好吃的</p>
+
+<p><img src="/wp-content/uploads/2013/05/IMG_1521.jpg" alt="来张合照呗" /> 来张合照呗</p>
+
+<p>此时！唉，又得集合回去了。还没吃饱呢！！</p>
+
+<h2 id="section-2">5月26日，星期日，晴</h2>
+
+<p>上午去湿地公园看看黑天鹅。</p>
+
+<p><img src="/wp-content/uploads/2013/05/20130526_083557.jpg" alt="这俩货在比谁潜的久木？" /> 我潜！我憋！</p>
+
+<p><img src="/wp-content/uploads/2013/05/20130526_083553.jpg" alt="刚刚谁赢了来着？" /> 刚刚谁赢了来着？继续？</p>
+
+<p><img src="/wp-content/uploads/2013/05/天鹅湖.jpg" alt="帅哥美女" /> 老拍鸭子多没意思（鸭子说，我是天鹅！）上几只，不对，几个，人！</p>
+
+<p>半小时后，去厦大沙滩骑自行车。GO！GO！</p>
+
+<p><img src="/wp-content/uploads/2013/05/骑自行车.jpg" alt="骑车专用披肩" /> 骑车专用披肩，飘逸！</p>
+
+<p><img src="/wp-content/uploads/2013/05/20130526_093828.jpg" alt="沙滩" /> 沙滩——天气不错哈，有人在放风筝呢，能找见不？</p>
+
+<p><img src="/wp-content/uploads/2013/05/飞吧飞吧.jpg" alt="飞吧飞吧" /> 跳吧跳吧，飞吧飞吧</p>
+
+<p>最后，不要脸贴张自拍。</p>
+
+<p><img src="/wp-content/uploads/2013/05/20130526_094018.jpg" alt="自拍" /> 自拍</p>
+
+<p>妹子呀，晒得够黑了，回去吧！</p>
+
+<p>至此，这次厦门之旅也该结束了，我和佩同学都是带着无限憧憬离开得，想着，“＊＊，下次不跟团了，自己来！”</p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start 
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/05/31/travel-of-xiamen"
+                    data-title="三天两夜厦门“赶场”游"
+                    data-url="http://1z1b.com/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/05/31/travel-of-xiamen/"
+                    data-images="http://1z1b.com/img/home-bg.jpg"
+                    data-content="5月24日，星期五，晴
+
+6点半起床，7点50集合，8点出发。天气很不错，阳光明媚，白云飘飘。
+
+ 天空晴朗
+
+先试试借来的单反，佩佩同学以后我就是你得御... | 曾 沙 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E8%AE%BE%E8%AE%A1/2013/05/22/i-graduated-a-year/" data-toggle="tooltip" data-placement="top" title="毕业一年">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E5%89%8D%E7%AB%AF/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E8%BD%AC%E8%BD%BD/2013/06/17/px-em-pt/" data-toggle="tooltip" data-placement="top" title="CSS文字大小单位px、em、pt ">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/05/31/travel-of-xiamen"
+                        data-title="三天两夜厦门“赶场”游"
+                        data-url="http://1z1b.com/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/05/31/travel-of-xiamen/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#设计" title="设计" rel="3">
+                                    设计
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#读书笔记" title="读书笔记" rel="2">
+                                    读书笔记
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#用户体验" title="用户体验" rel="2">
+                                    用户体验
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#2013" title="2013" rel="2">
+                                    2013
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#总结" title="总结" rel="2">
+                                    总结
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#photoshop" title="photoshop" rel="5">
+                                    photoshop
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#css" title="css" rel="2">
+                                    css
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#logo" title="logo" rel="8">
+                                    logo
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="2">
+                                    教程
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#扁平化设计" title="扁平化设计" rel="5">
+                                    扁平化设计
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字体" title="字体" rel="2">
+                                    字体
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#东涌" title="东涌" rel="4">
+                                    东涌
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#东西涌穿越" title="东西涌穿越" rel="4">
+                                    东西涌穿越
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#西涌" title="西涌" rel="4">
+                                    西涌
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字母" title="字母" rel="2">
+                                    字母
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://zengsha.me">曾沙</a></li>
+                    
+                        <li><a href="http://1z1b.com">一周一博</a></li>
+                    
+                        <li><a href="https://coding.net">Coding</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = '曾沙';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/zengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/izengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/happyzsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/happysha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 曾 沙 2016
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'zengsha.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

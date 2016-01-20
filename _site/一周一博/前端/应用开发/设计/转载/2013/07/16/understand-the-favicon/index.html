@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="狮子座，产品经理型设计师，猴妈">
+    <meta name="keyword"  content="曾沙">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>【转】弄懂Favicon - 曾 沙</title>
+
+    <link rel="canonical" href="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E5%89%8D%E7%AB%AF/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E8%AE%BE%E8%AE%A1/%E8%BD%AC%E8%BD%BD/2013/07/16/understand-the-favicon/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">曾 沙</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Stop 'touchstart' from $collapse propagating to document 
+     */
+    $collapse.addEventListener('touchstart', function(e){
+        e.stopPropagation();
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     */
+    document.addEventListener('touchstart', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#favicon" title="favicon">favicon</a>
+                        
+                    </div>
+                    <h1>【转】弄懂Favicon</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by happysha on July 16, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<blockquote>
+  <p>favicon是favorite icon的缩写，通常会显示在浏览器收藏夹（即书签）中以及地址栏左侧。中文有译作网站头像或书签图标，此处译作网站图标。</p>
+</blockquote>
+
+<p>——译者：<a href="http://t.qq.com/lybluesky0110">David</a></p>
+
+<p>当<a href="https://twitter.com/AlecRust">Alec Rust</a>问及<a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>项目是否可以提供<a href="https://github.com/h5bp/html5-boilerplate/issues/1285">切换成高DPI的favicon</a>的时候，我才意识到我对网站图标（<a href="http://www.w3.org/2005/10/howto-favicon">favorite icon</a>），触摸图标（<a href="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">touch icons</a>），和磁贴图标（<a href="http://blogs.msdn.com/b/ie/archive/2012/06/08/high-quality-visuals-for-pinned-sites-in-windows-8.aspx">tile icons</a>）知之甚少。当我决定稍稍深究一下的时候却发现一些有趣的事情。</p>
+
+<p>自从IE在1999年首次引入favicon以来，之后它就没再发生过什么变化。它们几乎总是<a href="http://en.wikipedia.org/wiki/ICO_(file_format)">ICO文件</a>，并且放在网站的根目录下，如：/favicon.ico，或者在CMS系统中作为某个主题的favicon放在图片目录下，就像下面这样：</p>
+
+<pre><code>&lt;link rel="shortcut icon" href="/path/to/favicon.ico"&gt;
+</code></pre>
+
+<p><img src="http://www.w3cplus.com/sites/default/files/styles/print_image/public/blogs/2013/favicon-1.jpg" alt="弄懂Favicon" /></p>
+
+<p>传统的favicon.ico是一个16×16像素的ICO文件，通常是16位色或带alpha透明度的24位色格式。当下也有32×32像素的favicon被使用，它们在主流浏览器中会被适当地缩小。在Metro版的IE 10中，地址栏上就是使用了32×32的图标</p>
+
+<p><img src="http://www.w3cplus.com/sites/default/files/styles/print_image/public/blogs/2013/favicon-2.jpg" alt="弄懂Favicon" /></p>
+
+<p>rel属性是favicon演变中的一个产物。IE 5本打算用shortcut icon来表示页面和图标之间的关系，但是当这份<a href="http://tools.ietf.org/html/rfc5988">规范</a>把rel属性值所表示的关系用空格分开后，这样理论上shortcut icon是创建了两种关系，即shortcut和icon。直到2010年HTML5规范把icon单独作为标准标识符。所以，在非IE浏览器中指定favicon时，可以不加shortcut属性。</p>
+
+<pre><code>&lt;!-- IE6-10 --&gt;
+&lt;link rel="shortcut icon" href="path/to/favicon.ico"&gt;
+
+&lt;!-- Everybody else --&gt;
+&lt;link rel="icon" href="path/to/favicon.ico"&gt;
+</code></pre>
+
+<p>favicon的type属性和[<script>的type属性](http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#attr-script-type)的作用几乎一样。截至2013年1月16日，据[维基百科](http://en.wikipedia.org/wiki/Favicon)显示，无论客户端是否为IE浏览器，[favicon的type属性](http://en.wikipedia.org/wiki/Favicon#How_to_use)都可能对其正常显示产生影响。事实上，IE只关心服务器MIME类型要为ICO文件，却会忽略type属性。因此，type属性可以是任意值，也可以为空。</script></p>
+
+<pre><code>&lt;!-- Still works in IE6+ --&gt;
+&lt;link rel="shortcut icon" href="path/to/favicon.ico" type="image/vnd.microsoft.icon"&gt;
+
+&lt;!-- Still works in IE6+ --&gt;
+&lt;link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon"&gt;
+
+&lt;!-- Still works in IE6+ --&gt;
+&lt;link rel="shortcut icon" href="path/to/favicon.ico"&gt;
+</code></pre>
+
+<p><img src="http://www.w3cplus.com/sites/default/files/styles/print_image/public/blogs/2013/favicon-3.jpg" alt="弄懂Favicon" /></p>
+
+<p>令我沮丧的是，Chrome，Firefox，Opera 7+，和Safari 4+都支持PNG格式的favicon，但是Chrome和Safari在两种格式都提供的情况下却会使用ICO格式，而且完全无视favicon的声明顺序。另一方面，IE不支持PNG格式的favicon，但是它会忽略PNG格式的声明以及声明顺序而直接使用ICO格式的favicon。</p>
+
+<pre><code>&lt;!-- Chrome, Safari, IE --&gt;
+&lt;link rel="shortcut icon" href="path/to/favicon.ico"&gt;
+
+&lt;!-- Firefox, Opera (Chrome and Safari say thanks but no thanks) --&gt;
+&lt;link rel="icon" href="path/to/favicon.png"&gt;
+</code></pre>
+
+<p>就像ICO格式一样，一个PNG格式的favicon也不适用于多种分辨率，所以我们可以写上多个含有sizes属性的声明来匹配每一种分辨率。</p>
+
+<pre><code>&lt;link rel="icon" href="favicon-16.png" sizes="16x16"&gt;
+&lt;link rel="icon" href="favicon-32.png" sizes="32x32"&gt;
+&lt;link rel="icon" href="favicon-48.png" sizes="48x48"&gt;
+&lt;link rel="icon" href="favicon-64.png" sizes="64x64"&gt;
+&lt;link rel="icon" href="favicon-128.png" sizes="128x128"&gt;
+</code></pre>
+
+<p>那些兼容PNG格式favicon的浏览器是如何确定使用哪个favicon的？Firefox和Safari会使用最后声明的那个。Chrome for Mac只会使用32×32大小的ICO格式。Chrome for Windows会首选16×16大小的ICO格式。如果在没有上述选项的情况下，两种平台的Chrome都会使用第一个声明的favicon，这点正好与Firefox和Safari相反。Chrome for Mac确实会忽略16×16的favicon而直接使用32×32的，如果在非视网膜屏的设备上就会把它缩小到16×16。Opera则完全是一种中立的态度，它会从所有声明的可用的favicon中完全随机地选择一个。我喜欢Opera这种做法。</p>
+
+<p>以上说的仅仅只是开始，现在是时候让我们来了解一下IE中的注意事项。</p>
+
+<p>IE8-10会在页面首次加载的时候就显示favicon。IE7则不会在页面第一次加载的时候就显示，而是在页面再次被访问的时候才显示favicon。更糟的是，IE6只会在网站被添加到收藏夹中并且在浏览器再次打开的时候才会显示favicon。只要浏览器清除缓存，favicon就会被删除。并且只有把网站再次添加的收藏夹中，favicon才会再次显示，或者是用某种手段再加载一次favicon文件。如果你不得不和IE6以及favicon同时打交道，那么你可以用下面这段JavaScript代码来强制重新加载favicon文件，最好把这段代码包裹在条件注释中。</p>
+
+<pre><code>&lt;!-- I "support" IE6 --&gt;
+&lt;!--[if IE 6]&gt;&lt;script&gt;(new Image).src="path/to/favicon.ico"&lt;/script&gt;&lt;![endif]--&gt;
+</code></pre>
+
+<p>让我们回到高DPI的问题上来。</p>
+
+<blockquote>
+  <p>你有没有问过自己这样一个问题——如果所有好浏览器都支持PNG格式的favicon，并且IE只需要提供ICO格式，但是ICO格式对Chrome和Safari却是个特例，那我们为什么不把ICO格式的favicon声明包裹在IE的条件注释中？</p>
+</blockquote>
+
+<p>好想法总为解决大难题而诞生。PNG文件可以代替ICO文件为你提供更大的图标。我们可以在IE中使用一个经典的32×32的ICO格式的favicon，而在除IE以外的其他浏览器中使用一个超级圆滑的96×96的PNG格式的favicon。</p>
+
+<pre><code>&lt;!-- Just IE? --&gt;
+&lt;!--[if IE]&gt;&lt;link rel="shortcut icon" href="path/to/favicon.ico"&gt;&lt;![endif]--&gt;
+
+&lt;!-- Everybody else? --&gt;
+&lt;link rel="icon" href="path/to/favicon.png"&gt;
+</code></pre>
+
+<p>现在有个大问题是，<a href="http://www.sitepoint.com/microsoft-drop-ie10-conditional-comments">IE 10不再支持条件注释</a>，而且也不支持PNG格式的favicon。上面的代码在之前的IE浏览器中确实会比最新的IE浏览器有更好的效果。</p>
+
+<blockquote>
+  <p>如果你说“嘿——要是我们把ICO格式的favicon放到网站的根目录下，而只使用<link rel="icon" />来声明PNG格式的favicon会怎么样？”</p>
+</blockquote>
+
+<p>恭喜你，你赢了。根据Chrome，Safari，和IE的局限性，这个办法确实可以让每个浏览器获得最好的favicon效果。IE会忽略<link rel="icon" />这样的声明而自动获取网站根目录/favicon.ico的ICO格式的favicon。而其他所有浏览器则会使用如下声明的PNG格式的favicon：</p>
+
+<pre><code>&lt;link rel="icon" href="path/to/favicon.png"&gt;
+</code></pre>
+
+<blockquote>
+  <p>你又会说“但是如果我想要多个favicon或者我的CMS系统不喜欢这么做，还有……其他的办法么？”</p>
+</blockquote>
+
+<p>当然有，不过你可能不会喜欢</p>
+
+<pre><code>&lt;!-- I "support" IE --&gt;
+&lt;script&gt;
+navigator.appName == "Microsoft Internet Explorer" &amp;&amp; (function (i, d, s, l) {
+   i.src = "favicon.ico";
+   s = d.getElementsByTagName("script")[0];
+   l = s.parentNode.insertBefore(d.createElement("link"), s);
+   l.rel = "shortcut icon";
+   l.href = i.src;
+})(new Image, document);
+&lt;/script&gt;
+
+&lt;!-- Everybody else --&gt;
+&lt;link rel="icon" href="path/to/favicon.png"&gt;
+</code></pre>
+
+<blockquote>
+  <p>上面这段JS脚本的意思是当客户端是IE浏览器时，构造了一条ICO格式的favicon声明，即:</p>
+</blockquote>
+
+<blockquote>
+
+  <pre><code>&lt;linkrel="shortcut icon"href=" favicon.ico"&gt;
+</code></pre>
+
+  <p>并插入页面文档中。——译者：<a href="http://t.qq.com/lybluesky0110">David</a></p>
+</blockquote>
+
+<p>对上面的解决方案都不满意？没关系，还有办法。<a href="http://windows.microsoft.com/en-US/internet-explorer/ie-10-release-preview">目前</a>使用IE 10的大多是Windows 8的用户。Windows 8提出一种新的网站显示图标——磁贴图标。</p>
+
+<p><img src="http://www.w3cplus.com/sites/default/files/styles/print_image/public/blogs/2013/favicon-4.jpg" alt="弄懂Favicon" /></p>
+
+<p>在Metro版的IE 10中，当网站的访问者把我们的网站附到（pin）开始屏幕上的时候，我们可以显示一个独一无二的磁贴图标。这些磁贴图标是144×144大小的PNG文件，为达到最佳效果它们使用透明背景。磁贴图标的背景色是可以用十六进制的RGB色（使用#RRGGBB这样的6位符号记法），或者CSS中的颜色名称，或者是CSS中的rgb()函数来指定。声明磁贴图标的标签非常简单。</p>
+
+<pre><code>&lt;meta name="msapplication-TileColor" content="#D83434"&gt;
+&lt;meta name="msapplication-TileImage" content="path/to/tileicon.png"&gt;
+</code></pre>
+
+<p><img src="http://www.w3cplus.com/sites/default/files/styles/print_image/public/blogs/2013/favicon-5.jpg" alt="弄懂Favicon" /></p>
+
+<p>OK，现在让我们来把它们合在一起，既满足IE 10的局限性，又保证其他方面的健全。</p>
+
+<pre><code>&lt;link rel="apple-touch-icon" href="path/to/touchicon.png"&gt;
+&lt;link rel="icon" href="path/to/favicon.png"&gt;
+&lt;!--[if IE]&gt;&lt;link rel="shortcut icon" href="path/to/favicon.ico"&gt;&lt;![endif]--&gt;
+&lt;!-- or, set /favicon.ico for IE10 win --&gt;
+&lt;meta name="msapplication-TileColor" content="#D83434"&gt;
+&lt;meta name="msapplication-TileImage" content="path/to/tileicon.png"&gt;
+</code></pre>
+
+<p>至少这是个不错的开始。</p>
+
+<p>如果你对创建favicon想了解更多，我推荐你看看Jon Hick的《<a href="http://www.netmagazine.com/features/create-perfect-favicon">图标指南</a>》（<a href="http://www.fivesimplesteps.com/products/the-icon-handbook">The Icon Handbook</a>）中的创造完美的favicon，以及Jonathan Snook的制作<a href="http://snook.ca/archives/design/making_a_good_favicon">好的favicon</a>。此外，我想感谢<a href="http://twitter.com/alrra">@alrra</a>告诉我关于磁贴图标的内容。</p>
+
+<p><strong>译者手语：</strong>整个翻译依照原文线路进行，并在翻译过程略加了个人对技术的理解。如果翻译有不对之处，还烦请同行朋友指点。谢谢！</p>
+
+<blockquote>
+
+</blockquote>
+
+<blockquote>
+
+  <h4 id="david">关于David</h4>
+
+  <p>2009年开始接触前端开发，2011年组建创业团队——[<a href="http://www.fi5e-d.com/">五维互动</a>]，2012年团队被“收编”并更名[创影互动]，遂只身来上海发展，现在就职于<a href="http://www.flipscript.com.cn/">FlipScript</a>。欢迎交流共勉：<a href="http://t.qq.com/lybluesky0110">腾讯微博</a>、<a href="http://www.codingserf.com/">个人博客</a>。</p>
+</blockquote>
+
+<p>如需转载烦请注明出处：</p>
+
+<p>英文原文：<a href="http://www.jonathantneal.com/blog/understand-the-favicon/">http://www.jonathantneal.com/blog/understand-the-favicon/</a></p>
+
+<p>中文译文：<a href="http://www.w3cplus.com/css/understand-the-favicon.html">http://www.w3cplus.com/css/understand-the-favicon.html</a></p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start 
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E5%89%8D%E7%AB%AF/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E8%AE%BE%E8%AE%A1/%E8%BD%AC%E8%BD%BD/2013/07/16/understand-the-favicon"
+                    data-title="【转】弄懂Favicon"
+                    data-url="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E5%89%8D%E7%AB%AF/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E8%AE%BE%E8%AE%A1/%E8%BD%AC%E8%BD%BD/2013/07/16/understand-the-favicon/"
+                    data-images="http://1z1b.com/img/home-bg.jpg"
+                    data-content="
+  favicon是favorite icon的缩写，通常会显示在浏览器收藏夹（即书签）中以及地址栏左侧。中文有译作网站头像或书签图标，此处译作网站图标... | 曾 沙 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/07/08/flat-design-countdown-timer/" data-toggle="tooltip" data-placement="top" title="【教程翻译】用Photoshop创建“iOS7风格”的扁平化倒计时器">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E8%AE%BE%E8%AE%A1/2013/07/17/simple-steps-to-turn-your-logo-into-a-web-font/" data-toggle="tooltip" data-placement="top" title="【教程】简单几步把logo变字体">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E5%89%8D%E7%AB%AF/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E8%AE%BE%E8%AE%A1/%E8%BD%AC%E8%BD%BD/2013/07/16/understand-the-favicon"
+                        data-title="【转】弄懂Favicon"
+                        data-url="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E5%89%8D%E7%AB%AF/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E8%AE%BE%E8%AE%A1/%E8%BD%AC%E8%BD%BD/2013/07/16/understand-the-favicon/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#设计" title="设计" rel="3">
+                                    设计
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#读书笔记" title="读书笔记" rel="2">
+                                    读书笔记
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#用户体验" title="用户体验" rel="2">
+                                    用户体验
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#2013" title="2013" rel="2">
+                                    2013
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#总结" title="总结" rel="2">
+                                    总结
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#photoshop" title="photoshop" rel="5">
+                                    photoshop
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#css" title="css" rel="2">
+                                    css
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#logo" title="logo" rel="8">
+                                    logo
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="2">
+                                    教程
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#扁平化设计" title="扁平化设计" rel="5">
+                                    扁平化设计
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字体" title="字体" rel="2">
+                                    字体
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#东涌" title="东涌" rel="4">
+                                    东涌
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#东西涌穿越" title="东西涌穿越" rel="4">
+                                    东西涌穿越
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#西涌" title="西涌" rel="4">
+                                    西涌
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字母" title="字母" rel="2">
+                                    字母
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://zengsha.me">曾沙</a></li>
+                    
+                        <li><a href="http://1z1b.com">一周一博</a></li>
+                    
+                        <li><a href="https://coding.net">Coding</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = '曾沙';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/zengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/izengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/happyzsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/happysha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 曾 沙 2016
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'zengsha.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

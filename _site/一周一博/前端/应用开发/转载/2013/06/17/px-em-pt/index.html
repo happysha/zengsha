@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="狮子座，产品经理型设计师，猴妈">
+    <meta name="keyword"  content="曾沙">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>CSS文字大小单位px、em、pt  - 曾 沙</title>
+
+    <link rel="canonical" href="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E5%89%8D%E7%AB%AF/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E8%BD%AC%E8%BD%BD/2013/06/17/px-em-pt/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">曾 沙</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Stop 'touchstart' from $collapse propagating to document 
+     */
+    $collapse.addEventListener('touchstart', function(e){
+        e.stopPropagation();
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     */
+    document.addEventListener('touchstart', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#css" title="css">css</a>
+                        
+                        <a class="tag" href="/tags/#em" title="em">em</a>
+                        
+                        <a class="tag" href="/tags/#pt" title="pt">pt</a>
+                        
+                        <a class="tag" href="/tags/#px" title="px">px</a>
+                        
+                        <a class="tag" href="/tags/#字体" title="字体">字体</a>
+                        
+                    </div>
+                    <h1>CSS文字大小单位px、em、pt </h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by happysha on June 17, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<p><img src="/wp-content/uploads/2013/06/em.jpg" alt="em" /></p>
+
+<p>老是被人问到px、pt和em的区别，自己有时候也会纠结到底该用什么单位，今天特意查了一些文章，下面这篇虽然很久远了，但解释的比较全面，转载收藏之。<a href="http://hi.baidu.com/gzjurkbqwynvxye/item/b53ec6ca61bd030dc710b292">点击查看原文</a></p>
+
+<p>这里引用的是Jorux的“95%的中国网站需要重写CSS”的文章，题目有点吓人，但是确实是现在国内网页制作方面的一些缺陷。我一直也搞不清楚px与em之间的关系和特点，看过以后确实收获很大。平时都是用px来定义字体，所以无法用浏览器字体放大的功能，而国外大多数网站都可以在IE下使用。因为：</p>
+
+<ol>
+  <li>IE无法调整那些使用px作为单位的字体大小；</li>
+  <li>国外的大部分网站能够调整的原因在于其使用了em作为字体单位；</li>
+  <li>Firefox能够调整px和em，但是96%以上的中国网民使用IE浏览器(或内核)。</li>
+</ol>
+
+<blockquote>
+  <p><strong>px</strong>像素（Pixel）是相对长度单位，像素px是相对于显示器屏幕分辨率而言的。(引自CSS2.0手册)</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>em</strong>是相对长度单位，相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。(引自CSS2.0手册)</p>
+</blockquote>
+
+<p>字体单位使用em能支持IE6下的字体缩放，在页面中按ctrl+滚轮，字体以px为单位的网站没有反应。</p>
+
+<p><strong>px</strong>是绝对单位，不支持IE的缩放。<br />
+<strong>em</strong>是相对单位，网页中的文字能放大和缩小。将行距(line-height)，和纵向高度的单位都用em。保证缩放时候的整体性。<br />
+任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。那么12px=0.75em,10px=0.625em。为了简化font-size的换算，需要在css中的body选择器中声明Font-size=62.5%，这就使em值变为 16px*62.5%=10px, 这样12px=1.2em, 10px=1em, 也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了。</p>
+
+<p>em有如下特点：<br />
+1. em的值并不是固定的；<br />
+2. em会继续父级元素的字体大小。</p>
+
+<p>所以我们在写CSS的时候，需要注意：<br />
+1. body选择器中声明Font-size=62.5%；（Font-size=63%；用于ie6兼容）<br />
+2. 将你的原来的px数值除以10，然后换上em作为单位；<br />
+3. 重新计算那些被放大的字体的em数值。避免字体大小的重复声明。<br />
+也就是避免1.2 * 1.2= 1.44的现象。比如说你在#content中声明了字体大小为1.2em，那么在声明p的字体大小时就只能是1em，而不是1.2em, 因为此em非彼em，它因继续#content的字体高而变为了1em=12px。<br />
+但是12px汉字例外，就是由以上方法得到的12px(1.2em)大小的汉字在IE中并不等于直接用12px定义的字体大小，而是稍大一点。这个问题 Jorux已经解决，只需在body选择器中把62.5%换成63%就能正常显示了。原因可能是IE处理汉字时，对于浮点的取值精确度有限。不知道有没有其他的解释。</p>
+
+<p><strong>单位pt的说明</strong></p>
+
+<p>在印刷排版中,point是一个绝对值,它等于1/72英寸,可以用尺子丈量的,物理的英寸。但是在css中pt含义却并非如此。因为我们的显示器被分割为了一个个的像素，单个像素只能有一种颜色 (为了简化，这里暂不讨论次像素反锯齿技术)，要在屏幕上显示，必须先把以 pt 为单位的长度转换为以像素为单位的长度，这个转换的媒介，就是 DPI (事实上，这里的所谓的 DPI，是操作系统和浏览器中使用的术语，即为 PPI, pixels per inch，和扫描仪、打印机、数码相机中的 DPI 是不同的概念)。</p>
+
+<p>例如，无论在哪个操作系统中，Firefox 浏览器默认的 DPI 都是 96，那么实际上 9pt = 9 * 1/72 * 96 = 12px。</p>
+
+<p>所以，虽然“DPI”中的“I”和“1pt 等于 1/72 inch”中的“inch”，都不代表物理上的英寸，但这两个单位互相之间是相等的，也就在相乘中约掉了。</p>
+
+<p>那么，真实的物理长度怎么计算呢?请拿出一把尺子，丈量你的显示器的可见宽度 (我这里是 11.2992 英寸)，除以横向分辨率 (我这里是 1024 像素)，得到的就是每个像素的物理长度。</p>
+
+<p>现在我们可以回答这样一个问题，网页上 9pt 的字体究竟占用了多宽的空间?答案是:　　9 * 1/72 * 96 * 11.2992 / 1024 = 0.1324 英寸 = 0.3363 厘米。</p>
+
+<p>虽然pt是绝对单位，但是那只是针对输出设备而言的，在文字排版工具（word，abobe）中是非常有用的字体单位。不管显示器的分辨率是多少，打印在纸面上的结果是一样的。</p>
+
+<p>但是网页主要为了屏幕显示，而不是为了打印等其他需要的。而px能够精确地表示元素在屏幕中的位置和大小。</p>
+
+<p>当然。在dpi是96的情况下，9pt=12px。</p>
+
+<p><em>附px、em、%和pt换算表</em></p>
+
+<p><img src="/wp-content/uploads/2013/06/1.jpg" alt="px、em、%和pt换算" /> px、em、%和pt换算</p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start 
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E5%89%8D%E7%AB%AF/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E8%BD%AC%E8%BD%BD/2013/06/17/px-em-pt"
+                    data-title="CSS文字大小单位px、em、pt "
+                    data-url="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E5%89%8D%E7%AB%AF/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E8%BD%AC%E8%BD%BD/2013/06/17/px-em-pt/"
+                    data-images="http://1z1b.com/img/home-bg.jpg"
+                    data-content="
+
+老是被人问到px、pt和em的区别，自己有时候也会纠结到底该用什么单位，今天特意查了一些文章，下面这篇虽然很久远了，但解释的比较全面，转载收藏之。点击... | 曾 沙 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/05/31/travel-of-xiamen/" data-toggle="tooltip" data-placement="top" title="三天两夜厦门“赶场”游">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/06/25/flat-design-mobile-apps/" data-toggle="tooltip" data-placement="top" title="扁平化设计之移动APP欣赏">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E5%89%8D%E7%AB%AF/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E8%BD%AC%E8%BD%BD/2013/06/17/px-em-pt"
+                        data-title="CSS文字大小单位px、em、pt "
+                        data-url="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E5%89%8D%E7%AB%AF/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E8%BD%AC%E8%BD%BD/2013/06/17/px-em-pt/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#设计" title="设计" rel="3">
+                                    设计
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#读书笔记" title="读书笔记" rel="2">
+                                    读书笔记
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#用户体验" title="用户体验" rel="2">
+                                    用户体验
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#2013" title="2013" rel="2">
+                                    2013
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#总结" title="总结" rel="2">
+                                    总结
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#photoshop" title="photoshop" rel="5">
+                                    photoshop
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#css" title="css" rel="2">
+                                    css
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#logo" title="logo" rel="8">
+                                    logo
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="2">
+                                    教程
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#扁平化设计" title="扁平化设计" rel="5">
+                                    扁平化设计
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字体" title="字体" rel="2">
+                                    字体
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#东涌" title="东涌" rel="4">
+                                    东涌
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#东西涌穿越" title="东西涌穿越" rel="4">
+                                    东西涌穿越
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#西涌" title="西涌" rel="4">
+                                    西涌
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字母" title="字母" rel="2">
+                                    字母
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://zengsha.me">曾沙</a></li>
+                    
+                        <li><a href="http://1z1b.com">一周一博</a></li>
+                    
+                        <li><a href="https://coding.net">Coding</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = '曾沙';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/zengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/izengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/happyzsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/happysha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 曾 沙 2016
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'zengsha.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

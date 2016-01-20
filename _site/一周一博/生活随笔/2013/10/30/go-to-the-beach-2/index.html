@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="狮子座，产品经理型设计师，猴妈">
+    <meta name="keyword"  content="曾沙">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>我们去海边露营吧！（二）——西涌 - 曾 沙</title>
+
+    <link rel="canonical" href="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/10/30/go-to-the-beach-2/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">曾 沙</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Stop 'touchstart' from $collapse propagating to document 
+     */
+    $collapse.addEventListener('touchstart', function(e){
+        e.stopPropagation();
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     */
+    document.addEventListener('touchstart', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#东涌" title="东涌">东涌</a>
+                        
+                        <a class="tag" href="/tags/#东西涌穿越" title="东西涌穿越">东西涌穿越</a>
+                        
+                        <a class="tag" href="/tags/#西涌" title="西涌">西涌</a>
+                        
+                    </div>
+                    <h1>我们去海边露营吧！（二）——西涌</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by Summer on October 30, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<blockquote>
+
+</blockquote>
+
+<blockquote>
+
+  <p><a href="http://www.1z1b.com/one-blog-a-week/go-to-the-beach-1/">我们去海边露营吧！（一）——大鹏所城</a></p>
+
+</blockquote>
+
+<blockquote>
+
+  <p><a href="http://www.1z1b.com/one-blog-a-week/go-to-the-beach-2/">我们去海边露营吧！（二）——西涌</a></p>
+
+</blockquote>
+
+<blockquote>
+
+  <p><a href="http://www.1z1b.com/one-blog-a-week/go-to-the-beach-3/">我们去海边露营吧！（三）——穿越东西涌</a></p>
+
+</blockquote>
+
+<blockquote>
+
+  <p><a href="http://www.1z1b.com/one-blog-a-week/go-to-the-beach-4/">我们去海边露营吧！（四）——东涌</a></p>
+
+</blockquote>
+
+<p><strong>目的地二：西涌</strong></p>
+
+<p> 坐车可以先返回到大鹏站，那里有大把的车去西涌。下午两点点多，我们到达目的地。西涌沙滩，这里虽然之前来过两回，但这次还是有点小激动。哈哈，终于可以在海边露营了。</p>
+
+<p>先撑帐篷，然后再好好休息一下。虽然已经在家里演习过一次了，可还是有点不熟。哈哈，直接看成果吧！看起来一般大，其实我们的帐篷和其他的比还是很大了，一米八的。开玩笑！</p>
+
+<p><img src="/wp-content/uploads/2013/10/帐篷2.jpg" alt="帐篷2" /></p>
+
+<p>不好意思，还里面有点凌乱。收拾一下，休息一下再去玩水好了，现在好晒！</p>
+
+<p><img src="/wp-content/uploads/2013/10/帐篷.jpg" alt="帐篷" /></p>
+
+<p>玩水去咯！水好清呀~~nice！</p>
+
+<p><img src="/wp-content/uploads/2013/10/水很清.jpg" alt="水很清" /></p>
+
+<p><img src="/wp-content/uploads/2013/10/水很清2.jpg" alt="水很清2" /></p>
+
+<p>我跳！</p>
+
+<p><img src="/wp-content/uploads/2013/10/小米2.jpg" alt="小米2" /></p>
+
+<p>裙子怎么不够飘逸呀~~</p>
+
+<p><img src="/wp-content/uploads/2013/10/我1.jpg" alt="我" /></p>
+
+<p>好啦，给泳圈充气，换泳衣去海里漂一漂吧。</p>
+
+<p>此处没图，真是可惜！</p>
+
+<p>等到太阳下山，天气微凉，就该上岸了。冲个凉还要每个人还要十块钱，本来准备去找点吃的，烧烤两个太没劲了，看着别人一伙伙的吃烧烤，真羡慕，小伙伴们，下次一起来吧。其他的餐厅看着也没什么食欲，就随便吃了些自己准备的零食，一边看了个电影。然后就睡了，明早还得看日出呢！</p>
+
+<p><img src="/wp-content/uploads/2013/10/露营的人.jpg" alt="露营的人" /></p>
+
+<p>第二天5点多就有人开始起床，慢慢的周围都热闹起来了。大伙都在等日出吧。</p>
+
+<p><img src="/wp-content/uploads/2013/10/帐篷3.jpg" alt="帐篷3" /></p>
+
+<p>清晨的情人岛挺安静。</p>
+
+<p><img src="/wp-content/uploads/2013/10/清晨的情人岛2.jpg" alt="清晨的情人岛2" /></p>
+
+<p>太阳露出微光</p>
+
+<p><img src="/wp-content/uploads/2013/10/清晨.jpg" alt="清晨" /></p>
+
+<p>太阳在云层里爬</p>
+
+<p><img src="/wp-content/uploads/2013/10/太阳2.jpg" alt="太阳2" /></p>
+
+<p>慢慢地，太阳彻底高照，我们该收拾收拾出发了</p>
+
+<p><img src="/wp-content/uploads/2013/10/太阳3.jpg" alt="太阳3" /></p>
+
+<p>亲，您这是堆的乌龟吧。别玩了，赶紧收拾收拾，向东涌前进！</p>
+
+<p><img src="/wp-content/uploads/2013/10/乌龟.jpg" alt="乌龟" /></p>
+
+<blockquote>
+
+</blockquote>
+
+<blockquote>
+
+  <p><a href="http://www.1z1b.com/one-blog-a-week/go-to-the-beach-1/">我们去海边露营吧！（一）——大鹏所城</a></p>
+
+</blockquote>
+
+<blockquote>
+
+  <p><a href="http://www.1z1b.com/one-blog-a-week/go-to-the-beach-2/">我们去海边露营吧！（二）——西涌</a></p>
+
+</blockquote>
+
+<blockquote>
+
+  <p><a href="http://www.1z1b.com/one-blog-a-week/go-to-the-beach-3/">我们去海边露营吧！（三）——穿越东西涌</a></p>
+
+</blockquote>
+
+<blockquote>
+
+  <p><a href="http://www.1z1b.com/one-blog-a-week/go-to-the-beach-4/">我们去海边露营吧！（四）——东涌</a></p>
+
+</blockquote>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start 
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/10/30/go-to-the-beach-2"
+                    data-title="我们去海边露营吧！（二）——西涌"
+                    data-url="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/10/30/go-to-the-beach-2/"
+                    data-images="http://1z1b.com/img/home-bg.jpg"
+                    data-content="
+
+
+
+
+
+  我们去海边露营吧！（一）——大鹏所城
+
+
+
+
+
+  我们去海边露营吧！（二）——西涌
+
+
+
+
+
+  我们去海边露营吧！（三）——穿越东西涌... | 曾 沙 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/10/29/go-to-the-beach-1/" data-toggle="tooltip" data-placement="top" title="我们去海边露营吧！（一）——大鹏所城">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/10/31/go-to-the-beach-3/" data-toggle="tooltip" data-placement="top" title="我们去海边露营吧！（三）——穿越东西涌">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/10/30/go-to-the-beach-2"
+                        data-title="我们去海边露营吧！（二）——西涌"
+                        data-url="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/10/30/go-to-the-beach-2/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#设计" title="设计" rel="3">
+                                    设计
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#读书笔记" title="读书笔记" rel="2">
+                                    读书笔记
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#用户体验" title="用户体验" rel="2">
+                                    用户体验
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#2013" title="2013" rel="2">
+                                    2013
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#总结" title="总结" rel="2">
+                                    总结
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#photoshop" title="photoshop" rel="5">
+                                    photoshop
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#css" title="css" rel="2">
+                                    css
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#logo" title="logo" rel="8">
+                                    logo
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="2">
+                                    教程
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#扁平化设计" title="扁平化设计" rel="5">
+                                    扁平化设计
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字体" title="字体" rel="2">
+                                    字体
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#东涌" title="东涌" rel="4">
+                                    东涌
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#东西涌穿越" title="东西涌穿越" rel="4">
+                                    东西涌穿越
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#西涌" title="西涌" rel="4">
+                                    西涌
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字母" title="字母" rel="2">
+                                    字母
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://zengsha.me">曾沙</a></li>
+                    
+                        <li><a href="http://1z1b.com">一周一博</a></li>
+                    
+                        <li><a href="https://coding.net">Coding</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = '曾沙';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/zengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/izengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/happyzsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/happysha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 曾 沙 2016
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'zengsha.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

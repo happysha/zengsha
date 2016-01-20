@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="狮子座，产品经理型设计师，猴妈">
+    <meta name="keyword"  content="曾沙">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>扁平化设计及其色彩趋势 - 曾 沙</title>
+
+    <link rel="canonical" href="http://1z1b.com/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/05/10/flat-design-colors/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">曾 沙</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Stop 'touchstart' from $collapse propagating to document 
+     */
+    $collapse.addEventListener('touchstart', function(e){
+        e.stopPropagation();
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     */
+    document.addEventListener('touchstart', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#扁平化设计" title="扁平化设计">扁平化设计</a>
+                        
+                    </div>
+                    <h1>扁平化设计及其色彩趋势</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by Summer on May 10, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<p>此前我们已经讨论过很多扁平化设计趋势，<a href="http://www.1z1b.com/design/flat-design-examples/">大量炫酷的例子</a>，甚至提供了一个免费的用户界面工具包 <a href="http://designmodo.com/flat-free/">free user interface kit</a> 供你们下载使用。</p>
+
+<p>但你要是想自己设计该怎么做呢？给点提示，色彩是其中趋势最重要的一部分。</p>
+
+<h2 id="section">扁平化设计进补</h2>
+
+<p><a href="http://wistia.com/"><img src="/wp-content/uploads/2013/05/wistia.jpg" alt="wistia" /></a></p>
+
+<p><a href="http://roybarber.com/"><img src="/wp-content/uploads/2013/05/roybarber.jpg" alt="roybarber" /></a></p>
+
+<p><a href="http://squidee.co/"><img src="/wp-content/uploads/2013/05/squidee.jpg" alt="squidee" /></a></p>
+
+<p><a href="http://www.thrivesolo.com/"><img src="/wp-content/uploads/2013/05/solo.jpg" alt="solo" /></a></p>
+
+<p>扁平化设计是：只需要简单的效果或完全不用特效来创建的设计方案，它不会用到包括像阴影、斜面、浮雕和渐变等这些三维效果 。</p>
+
+<p>扁平化设计给人感觉简洁，虽说它也能做得很复杂。简单、直接而友好的特性使它迅速受到移动用户界面和时尚网页设计的青睐。</p>
+
+<p>想了解更多关于平面设计趋势，请看之前<a href="http://designmodo.com/flat-design/">这篇文章</a>。</p>
+
+<h2 id="section-1">定义调色板</h2>
+
+<p>说到色彩，扁平化设计作品可谓五彩缤纷，但大部分设计师偏爱大胆和明快的色彩。</p>
+
+<p>另外扁平化设计用色不同在哪呢？设计师们的色板从之前一两种颜色扩展到三四种甚至更多。而且这些颜色大部分明快甚至完全饱和，当然偶尔也用用灰色或黑色。</p>
+
+<p>说到色彩和扁平化设计，很多有关色彩配对和搭配的常规被抛到九霄云外，甚至之前大量流行的彩虹调色板。</p>
+
+<p>扁平化设计的色彩大多就是色调及饱和度的搭配。设计师们色彩选择范围很广，色彩也是彼此映射，同类色、类似色、互补色，还有黑色白色的混和。色彩上要么是超亮超饱和，要么更复古或更单一。这不是说只能有这些可能，而是这些已是最流行趋势。</p>
+
+<h3 id="section-2">亮色</h3>
+
+<p><a href="http://flatuicolors.com/"><img src="/wp-content/uploads/2013/05/Flat-UI-Colors.jpg" alt="Flat-UI-Colors" /></a></p>
+
+<p><a href="http://dribbble.com/shots/540216-Weather-app"><img src="/wp-content/uploads/2013/05/weather-widget.jpg" alt="weather-widget" /></a></p>
+
+<p><a href="http://dribbble.com//shots/894214-Weather-Widget-freebie"><img src="/wp-content/uploads/2013/05/weather-app.jpg" alt="weather-app" /></a></p>
+
+<p>这是扁平化设计最受欢迎的色彩趋势。色彩鲜艳明快给人感觉独特，是扁平化设计的一大特征。鲜艳的颜色和浅色背景、深色背景搭配起来都相得益彰，总能给用户以强烈视觉冲击。</p>
+
+<h3 id="section-3">那么我们从哪开始？</h3>
+
+<p><a href="http://flatuicolors.com/">FlatUIColors.com</a> 提供了一些当前扁平化设计最流行的颜色。从鲜艳的蓝色绿色到黄色橘色，这些颜色集中体现了现在色彩的流行趋势。这个网站是一个很好的起点，你可以选择一个颜色并免费获取颜色值。</p>
+
+<p><a href="http://designmodo.com/">Designmodo</a>最近发布的 <a href="http://designmodo.com/flat-free/">Flat UI</a> 工具包进一步概括了亮色设计，以相同明度的色彩为轮廓提供了一个强大易用的界面工具。如果你是色彩搭配菜鸟这是个非常好的选择，它时髦的图标和颜色板可用于各式各样的项目。</p>
+
+<p>亮色配色在扁平化设计色板中很少看到直接使用红、黄、蓝三原色，取而代之的是丰富的混合色。要你想自己配色，注意简洁。记得选择色调和饱和度相似的颜色，可以从我们给出了几种色值开始。</p>
+
+<p><img src="/wp-content/uploads/2013/05/brights.jpg" alt="brights" /></p>
+
+<p><strong>亮色色板：</strong>尝试把这些颜色混合成组创建一个牛逼的色板。记住每一种颜色应该和白色或者黑色背景形成巨大反差。</p>
+
+<p><strong>流行色：</strong>蓝色、绿色、紫色</p>
+
+<h3 id="section-4">复古色</h3>
+
+<p><a href="http://invoisse.com/"><img src="/wp-content/uploads/2013/05/inviosse.jpg" alt="inviosse" /></a></p>
+
+<p><a href="http://dribbble.com//shots/940908-My-drinks"><img src="/wp-content/uploads/2013/05/my-drinks.jpg" alt="my-drinks" /></a></p>
+
+<p><a href="http://www.geckoboard.com/plans-and-pricing/"><img src="/wp-content/uploads/2013/05/geckoboard.jpg" alt="geckoboard" /></a></p>
+
+<p><a href="http://pattern.dk/sun/"><img src="/wp-content/uploads/2013/05/pattern-sun.jpg" alt="pattern-sun" /></a></p>
+
+<p><a href="http://designmodo.com/retro-colors/">复古配色方案</a>也是扁平式设计的一个潮流。</p>
+
+<p>这些颜色低饱和，给人的感觉很柔和但又显老派。虽说衍生于亮色，但复古色和白色搭配却很柔和。复古配色经常是大量橘色和黄色，偶尔用到红色或蓝色。</p>
+
+<p>因为颜色缓和，原色和第二色经常应用到复古型的扁平化设计中。</p>
+
+<p><img src="/wp-content/uploads/2013/05/retro.jpg" alt="retro" /></p>
+
+<p><strong>复古色色板</strong>：复古色和主导色彩元素搭配是最好的选择。把它们和图片或者柔和的颜色搭在一起都能产生很好的效果。</p>
+
+<p><strong>流行色：</strong>橙色、桃红或玫红色、深蓝</p>
+
+<h3 id="section-5">单一色</h3>
+
+<p><a href="http://dribbble.com/shots/912418-Flat-List"><img src="/wp-content/uploads/2013/05/cathryn-anne.jpg" alt="cathryn-anne" /></a></p>
+
+<p><a href="http://foundation.zurb.com/"><img src="/wp-content/uploads/2013/05/foundation1.jpg" alt="foundation1" /></a></p>
+
+<p><a href="http://dribbble.com/shots/780188-Morning"><img src="/wp-content/uploads/2013/05/blue-mono.jpg" alt="blue-mono" /></a></p>
+
+<p><a href="http://designmodo.com/monotone-colors/">单一色</a> 正值流行上升趋势，一种颜色加上黑白就能创造亮眼但又独特的色板。</p>
+
+<p>大部分单一色配色是一种基色加上两三种近似色。最流行的单色似乎是蓝色，但也有很多设计师只用黑色（灰色）然后加上一种流行色像红色做按钮或者引导操作。当然你可以让颜色稍微有点变化。比如你的主色调是蓝色，你可以加点不同程度的绿色创造一个蓝绿色调方案。</p>
+
+<p>同时，单一配色尤其在手机和app设计上流行。</p>
+
+<p><img src="/wp-content/uploads/2013/05/mono.jpg" alt="mono" /></p>
+
+<p><strong>单色色板：</strong>和其他配色方案一样，通过调节对比度，可以在父色的基础得到很多不同的颜色。比如从一个从父色(100%)调成更淡的50%、20%和8%。</p>
+
+<p><strong>流行色：</strong>蓝色、灰色、绿色</p>
+
+<h2 id="section-6">总结</h2>
+
+<p>让扁平化设计真正成功的是它的新鲜和有趣，你也应该在项目里充分体现它。</p>
+
+<p>为你的项目定制色彩，告诉用户怎样使用你的网站，怎样寻找乐趣。超越传统跳出束缚尽情创造更舒服的色彩方案吧。</p>
+
+<p>欢迎免费下载<a href="http://designmodo.com/flat-free">Flat UI</a>，开始你的项目吧。</p>
+
+<p>原文链接：<a href="http://designmodo.com/flat-design-colors/">http://designmodo.com/flat-design-colors/</a></p>
+
+<p>忍不住搜素一下有没有其他版本，果然。他的翻译可比我地道多了，请戳：<a href="http://ucdchina.com/snap/12827">http://ucdchina.com/snap/12827</a></p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start 
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/05/10/flat-design-colors"
+                    data-title="扁平化设计及其色彩趋势"
+                    data-url="http://1z1b.com/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/05/10/flat-design-colors/"
+                    data-images="http://1z1b.com/img/home-bg.jpg"
+                    data-content="此前我们已经讨论过很多扁平化设计趋势，大量炫酷的例子，甚至提供了一个免费的用户界面工具包 free user interface kit 供你们下载使用。... | 曾 沙 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/2013/05/06/practical-text-effects/" data-toggle="tooltip" data-placement="top" title="100+创意字体欣赏和文字特效案例教程（八）——实用特效">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/05/13/phone-camera-skills/" data-toggle="tooltip" data-placement="top" title="24条手机拍照实用技巧">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/05/10/flat-design-colors"
+                        data-title="扁平化设计及其色彩趋势"
+                        data-url="http://1z1b.com/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/05/10/flat-design-colors/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#设计" title="设计" rel="3">
+                                    设计
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#读书笔记" title="读书笔记" rel="2">
+                                    读书笔记
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#用户体验" title="用户体验" rel="2">
+                                    用户体验
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#2013" title="2013" rel="2">
+                                    2013
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#总结" title="总结" rel="2">
+                                    总结
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#photoshop" title="photoshop" rel="5">
+                                    photoshop
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#css" title="css" rel="2">
+                                    css
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#logo" title="logo" rel="8">
+                                    logo
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="2">
+                                    教程
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#扁平化设计" title="扁平化设计" rel="5">
+                                    扁平化设计
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字体" title="字体" rel="2">
+                                    字体
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#东涌" title="东涌" rel="4">
+                                    东涌
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#东西涌穿越" title="东西涌穿越" rel="4">
+                                    东西涌穿越
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#西涌" title="西涌" rel="4">
+                                    西涌
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字母" title="字母" rel="2">
+                                    字母
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://zengsha.me">曾沙</a></li>
+                    
+                        <li><a href="http://1z1b.com">一周一博</a></li>
+                    
+                        <li><a href="https://coding.net">Coding</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = '曾沙';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/zengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/izengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/happyzsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/happysha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 曾 沙 2016
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'zengsha.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

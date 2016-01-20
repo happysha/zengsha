@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="狮子座，产品经理型设计师，猴妈">
+    <meta name="keyword"  content="曾沙">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>毕业一年 - 曾 沙</title>
+
+    <link rel="canonical" href="http://1z1b.com/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E8%AE%BE%E8%AE%A1/2013/05/22/i-graduated-a-year/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">曾 沙</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Stop 'touchstart' from $collapse propagating to document 
+     */
+    $collapse.addEventListener('touchstart', function(e){
+        e.stopPropagation();
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     */
+    document.addEventListener('touchstart', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#2012" title="2012">2012</a>
+                        
+                        <a class="tag" href="/tags/#毕业" title="毕业">毕业</a>
+                        
+                        <a class="tag" href="/tags/#设计" title="设计">设计</a>
+                        
+                    </div>
+                    <h1>毕业一年</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by Summer on May 22, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<p><img src="/wp-content/uploads/2013/05/1-1.jpg" alt="1-1" /></p>
+
+<p>2012年6月10号，我一个人坐火车来到深圳；6月11号，正式开始毕业后的第一份工作。马上快一年了，整理一下自己这一 年的“所作所为”，算是自勉吧。</p>
+
+<h2 id="section">一、“开源”之旅</h2>
+
+<p><a href="http://www.oschina.net/">OSC</a> 的工作挺杂的，从平面到网页，到CSS代码，到视频处理，到和广告商洽谈帮他们更新代码，很多时候我都必须独自面对。</p>
+
+<p>下面列一些毕业这一年的工作:</p>
+
+<p>1、<a href="http://www.oschina.net/project/zh">国产开源软件</a>——这是来到开源中国做的第一个页面，没有太多设计感，很平淡的一个页面，只想纪念一下。</p>
+
+<p><img src="/wp-content/uploads/2013/05/国产开源软件2-1_02.jpg" alt="国产开源软件" /> 国产开源软件</p>
+
+<p>2、<a href="http://www.oschina.net/ios/home">iOS开发专区</a>和<a href="http://www.oschina.net/ios/codingList">iOS代码库</a>——老大们都想看到超越之前Android专区的平淡感，所以我迎合了苹果一贯的那种简洁和质感，效果还算不错。</p>
+
+<p><img src="/wp-content/uploads/2013/05/iOS开发社区_02.jpg" alt="iOS开发社区" /> iOS开发社区</p>
+
+<p><img src="/wp-content/uploads/2013/05/iOS软件分类_02.jpg" alt="iOS软件分类" /> iOS软件分类</p>
+
+<p>3、<a href="http://www.oschina.net/tweets">动弹列表页</a>重新设计——其实是很简单的页面，不过中间有点小波折，下面第一个图片是最开始版本，想赶潮流用瀑布流的形式，没想到上线之后反对声一片。我没有意识到，其实用户只想在最短的时间内看更多动弹，而且我们的网站并不像那些运用很好运用瀑布流的主流网站有那么多精美的图片供用户欣赏。于是马上改版，简单的列表，尽可能的一目了然。</p>
+
+<p><img src="/wp-content/uploads/2013/05/动弹_02.jpg" alt="动弹-版1" /> 动弹-版1</p>
+
+<p><img src="/wp-content/uploads/2013/05/动弹2_02.jpg" alt="动弹-版2" /> 动弹-版2</p>
+
+<p>4、<a href="http://www.oschina.net/app">移动客户端宣传页Mobile</a>——用于介绍3种客户端，并提供市场下载和站内下载。</p>
+
+<p><img src="/wp-content/uploads/2013/05/mobile-Android_02.jpg" alt="Mobile宣传页" /> 移动客户端宣传页Mobile</p>
+
+<p>4、<a href="http://www.oschina.net/translate">翻译平台设计</a>——这是一个全新的栏目，方便程序员们合作翻译某篇文章。此时网站的头部已经有了变化，更加干净清爽。这个页面设计了好几版，下面这个和线上最新的版本最接近，因为后面又对整个页面进行扁平化处理，去掉渐变和阴影，留下最干净的框架。</p>
+
+<p><img src="/wp-content/uploads/2013/05/翻译平台_02.jpg" alt="翻译平台" /> 翻译平台</p>
+
+<p>5、<a href="http://www.oschina.net/project/top_cn_2012">开源软件评选</a>——2012年度最受欢迎国内开源软件投票页面。绿色的主色调加上一些开源软件的logo做陪衬。</p>
+
+<p><img src="/wp-content/uploads/2013/05/开源评选.jpg" alt="开源软件评选" /> 开源软件评选</p>
+
+<p>6、整站改版，包括整站头部、各个栏目页的调整（博客、资讯、登陆注册、搜索页设计等）。主要是头部有大变动，栏目页的改动其实并不大，主要是为了单个页面能和头部协调。不过从整体上看，整个网站的所有栏目并没有达到完全的统一，以后的路还很长哈。</p>
+
+<p><img src="/wp-content/uploads/2013/05/toubu_01.jpg" alt="头部改版" /> 头部改版</p>
+
+<p><img src="/wp-content/uploads/2013/05/sousuo_01.jpg" alt="搜索" /> 搜索</p>
+
+<p><img src="/wp-content/uploads/2013/05/登陆_02.jpg" alt="登陆" /> 登陆</p>
+
+<p>7、<a href="http://www.oschina.net/cloudfoundry-app-contest">CloudFoundry应用开发大赛</a>——在开源的 PaaS 平台开发属于自己的应用。蓝色背景加上白云，比较符合CloudFoundry一贯的风格。</p>
+
+<p><img src="/wp-content/uploads/2013/05/CloudFoundry_02.jpg" alt="CloudFoundry" /> CloudFoundry</p>
+
+<p>8、<a href="http://www.ostools.net/">在线工具</a>——这里提供了方便好用的在线工具。</p>
+
+<p><img src="/wp-content/uploads/2013/05/在线工具_02.jpg" alt="在线工具" /> 在线工具</p>
+
+<p>9、<a href="http://runjs.cn/">RunJS</a>——开源中国全新在线编辑、展示、分享、交流 JavaScript 代码的平台。广场展示了一些最新最热的优质代码；编辑器用于编辑代码，有两种主题可以切换；个性插件用于自由扩展、自我增强。比较沉稳的暗色调为主调，搭配比较亮的蓝色，整体感觉并不是很沉闷。</p>
+
+<p><img src="/wp-content/uploads/2013/05/RunJS_01.jpg" alt="RunJS" /> RunJS首页</p>
+
+<p><img src="/wp-content/uploads/2013/05/runjs2.jpg" alt="runjs广场" /> runjs广场</p>
+
+<p><img src="/wp-content/uploads/2013/05/runjs3.jpg" alt="runjs编辑器-白" /> runjs编辑器-白</p>
+
+<p><img src="/wp-content/uploads/2013/05/RunJS4.jpg" alt="RunJS编辑器-暗" /> RunJS编辑器-黑</p>
+
+<p>10、<a href="http://city.oschina.net/home">城市圈设计</a>——以城市为载体的话题圈。整个城市圈都是清新的风格，很喜欢这个导入页，简单的效果，配上文字刚刚好。</p>
+
+<p><img src="/wp-content/uploads/2013/05/chengshiquan_02.jpg" alt="城市圈设计-导入页" /> 城市圈设计-导入页</p>
+
+<p><img src="/wp-content/uploads/2013/05/chengshiquan4_02.jpg" alt="城市圈设计-导入页" /> 城市圈设计-导入页</p>
+
+<p><img src="/wp-content/uploads/2013/05/chengshiquan2_02.jpg" alt="城市圈-上海" /> 城市圈-上海</p>
+
+<p>11、扑克牌设计——选了54个世界最著名的开源软件logo，做成一幅扑克牌。找超大分辨率的logo都找了好几天，处理的时候各种微调，必须一张一张扑克调整好再看整体再调。</p>
+
+<p><img src="/wp-content/uploads/2013/05/110.jpg" alt="1" /></p>
+
+<p><img src="/wp-content/uploads/2013/05/210.jpg" alt="2" /></p>
+
+<p><img src="/wp-content/uploads/2013/05/310.jpg" alt="3" /></p>
+
+<p>12、几个EDM图片——拜年、蛇年大吉、“开源改变世界”讲座</p>
+
+<p><img src="/wp-content/uploads/2013/05/蛇年.jpg" alt="蛇年" /></p>
+
+<p><img src="/wp-content/uploads/2013/05/蛇年2.jpg" alt="蛇年2" /></p>
+
+<p><img src="/wp-content/uploads/2013/05/开源改变世界.jpg" alt="开源改变世界" /></p>
+
+<p>13、最受欢迎开源软件奖杯——为上面那个开源软件评选做得奖杯。</p>
+
+<p><img src="/wp-content/uploads/2013/05/开源奖杯.jpg" alt="开源奖杯" /></p>
+
+<p>14、卡通马克杯——虽然最后这款马克杯只打版了一个就没下文了（不是我设计的原因，是因为当时没有找到满意的杯子:)），但毕竟是我第一次的漫画成果。</p>
+
+<p><img src="/wp-content/uploads/2013/05/杯子模型.jpg" alt="杯子效果图" /> 杯子效果图</p>
+
+<p><img src="/wp-content/uploads/2013/05/小人儿-样板.jpg" alt="杯子-男孩女孩" /> 杯子-男孩女孩</p>
+
+<p>15、一些小banner。也是自己工作的一部分，好吧，有点帮别人免费打广告的嫌疑喔。</p>
+
+<p><img src="/wp-content/uploads/2013/05/banner.jpg" alt="banner" /> 一些广告banner</p>
+
+<p>17、<a href="http://i.youku.com/u/UNDgwMzI1OTg4">处理视频</a>——为源创会处理了一些视频，不过是很简单的剪辑，加上一些文字说明，导出然后转格式上传到优酷之类的活儿。不过这种粗活还是得有人来做的。</p>
+
+<p>18、翻译了一些文章。其实这不只是工作的一部分，现在慢慢变成生活的一部分。自己确实需要涉猎的东西太多了，看看国外的文章能更好的拓展我的视野，我也很乐意把它们分享给大家。现在看来，从有点惧怕到慢慢习惯看看长长的英文，不能说自己的翻译水平进步很大，至少耐心是长了些，并且知道了一些很好的国外网站。</p>
+
+<ol>
+  <li>
+    <p><a href="http://www.oschina.net/question/179699_61749">10个有用的排版技巧提升你网站的可读性</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.oschina.net/question/179699_63187">10个网页设计师必备的CSS技巧</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.oschina.net/question/179699_65607">用户体验设计的核心之旅——揭露神话</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.oschina.net/question/179699_68955">10个非常不错的CSS技巧</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.oschina.net/question/179699_72916">9个非常有用的CSS网页设计技巧</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.oschina.net/question/179699_75159">最好的CSS方式——OOCSS+ Sass</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.1z1b.com/design/mobile-design-colours/">移动色彩设计新趋势</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.1z1b.com/design/become-a-better-graphic-designer/">菜鸟指南——优秀平面设计师是怎样炼成的</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.1z1b.com/design/grid-website-designs/">精彩网格式网页设计赏析</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.1z1b.com/design/how-to-write-web-design-tutorials/">葵花宝典之怎样编写网页设计和开发教程</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.1z1b.com/design/flat-design-colors/">扁平化设计及其色彩趋势</a></p>
+  </li>
+</ol>
+
+<h2 id="section-1">二、8小时之外</h2>
+
+<p>8小时之外其实不只有生活，也有一些事情算是工作。</p>
+
+<p>1、帮朋友弄过几个网站，不过都不是很满意，不想拿出来了。人有时候就是这样子，为了满足自己物质的需求不得不做一些自己并不太喜欢的事情，而且乐此不疲。</p>
+
+<p>2、做了两个logo，一个是敏捷社区长沙的，一个是我们这个博客的logo。logo一直被我认为是最难的设计工作，一个小小的图标必须把企业或者组织的内涵很好的体现出来，不多不少。从提取概念做思维导图，到选择可行方案画草图，再到数字化，每一步其实都是在尝试怎么能达到更好的效果，不过自己实践太少了，下面的两个logo只能勉强算是我的练习吧。敏捷社区的logo，用“涡轮”这个具象的物体表现敏捷开发迅速、灵活、循环迭代的思想，同时涡轮也是有多片叶子组成，是人与人协同合作的很好表现。这个概念是受了朋友的启发，自己其他的一些想法最后都夭折了。一周一博的logo，和朋友讨论怎么样才能体现我们这一群人所要坚持的精神——滴水穿石，即使是一滴水内也有暗涌，这是最终确立的想法，也就有了现在这个logo。</p>
+
+<p><img src="/wp-content/uploads/2013/05/敏捷社区长沙logo.jpg" alt="敏捷社区@长沙" /> 敏捷社区@长沙</p>
+
+<p><img src="/wp-content/uploads/2013/05/1z1b_logo.png" alt="一周一博" /> 一周一博</p>
+
+<p>3、一周一博，这个网站酝酿了蛮久，最后拉了一些朋友终于把这个网站给建起了。复古的磨砂纸张，左边的导航可以完全收起来，让我们静心的阅读别人的文章，响应式布局，兼容各个平台，目前来说这样的设计够用了。</p>
+
+<p><img src="/wp-content/uploads/2013/05/1z1b.jpg" alt="一周一博网站各平台效果图" /> 一周一博网站各平台效果图</p>
+
+<p>4、每周一篇博客，从去年11月24日开始到现在，差不多半年的时间，自己写的博客加上这篇算24篇（没包括用一周一博管理员账号发的），平均下来每个月4篇，其实并没有做到每个星期都有一篇，因为总有被自己鄙视的时候，被自己各种借口没有坚持写。这算不算是一种拖延症？</p>
+
+<p>5、买了设备打豆浆做酸奶，还在想是不是要购置个烤箱烤烤蛋糕啥的，有人投资木？还养了些花花草草，算是增加了些生活乐趣吧。</p>
+
+<p>6、走得远一点的地儿就香港（<a href="http://www.1z1b.com/one-blog-a-week/one-day-in-hong-kong/">香港一日游</a>）和广州吧，这周末去厦门，很期待的呢！</p>
+
+<p>7、现在回头看看<a href="http://www.1z1b.com/one-blog-a-week/2012-2013/">2013年的计划</a>，真的是计划赶不上变化，大部分都没有很好的实践。有时候真的很纠结，明明想好的事情会被时间冲淡，最后都不敢面对。</p>
+
+<h2 id="section-2">三、回望&amp;展望</h2>
+
+<p>时间过得好快呀，以前老喜欢说这话。毕业一年，回头看看自己确实也做了很多事情，除去意气用事的时候，大部分日子也都比较充实。接下来的一年会是怎样的呢？</p>
+
+<p><strong>最大的希望是能够结识更多设计圈的朋友，毕竟老混在程序员圈子里也不是个事；还有希望自己能够做出更多让自己满意也让别人满意的作品。最后，多看看这个世界吧。</strong></p>
+
+<p>设计源于生活，我爱设计更应该爱生活！</p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start 
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E8%AE%BE%E8%AE%A1/2013/05/22/i-graduated-a-year"
+                    data-title="毕业一年"
+                    data-url="http://1z1b.com/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E8%AE%BE%E8%AE%A1/2013/05/22/i-graduated-a-year/"
+                    data-images="http://1z1b.com/img/home-bg.jpg"
+                    data-content="
+
+2012年6月10号，我一个人坐火车来到深圳；6月11号，正式开始毕业后的第一份工作。马上快一年了，整理一下自己这一 年的“所作所为”，算是自勉吧。
+... | 曾 沙 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/05/13/phone-camera-skills/" data-toggle="tooltip" data-placement="top" title="24条手机拍照实用技巧">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/2013/05/31/travel-of-xiamen/" data-toggle="tooltip" data-placement="top" title="三天两夜厦门“赶场”游">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E8%AE%BE%E8%AE%A1/2013/05/22/i-graduated-a-year"
+                        data-title="毕业一年"
+                        data-url="http://1z1b.com/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E8%AE%BE%E8%AE%A1/2013/05/22/i-graduated-a-year/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#设计" title="设计" rel="3">
+                                    设计
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#读书笔记" title="读书笔记" rel="2">
+                                    读书笔记
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#用户体验" title="用户体验" rel="2">
+                                    用户体验
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#2013" title="2013" rel="2">
+                                    2013
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#总结" title="总结" rel="2">
+                                    总结
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#photoshop" title="photoshop" rel="5">
+                                    photoshop
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#css" title="css" rel="2">
+                                    css
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#logo" title="logo" rel="8">
+                                    logo
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="2">
+                                    教程
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#扁平化设计" title="扁平化设计" rel="5">
+                                    扁平化设计
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字体" title="字体" rel="2">
+                                    字体
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#东涌" title="东涌" rel="4">
+                                    东涌
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#东西涌穿越" title="东西涌穿越" rel="4">
+                                    东西涌穿越
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#西涌" title="西涌" rel="4">
+                                    西涌
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字母" title="字母" rel="2">
+                                    字母
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://zengsha.me">曾沙</a></li>
+                    
+                        <li><a href="http://1z1b.com">一周一博</a></li>
+                    
+                        <li><a href="https://coding.net">Coding</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = '曾沙';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/zengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/izengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/happyzsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/happysha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 曾 沙 2016
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'zengsha.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

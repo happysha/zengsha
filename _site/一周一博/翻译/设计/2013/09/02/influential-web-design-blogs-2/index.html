@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="狮子座，产品经理型设计师，猴妈">
+    <meta name="keyword"  content="曾沙">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>【翻译】作为设计师必须知道的30个最具影响力的高质量网页设计博客（二） - 曾 沙</title>
+
+    <link rel="canonical" href="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/09/02/influential-web-design-blogs-2/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">曾 沙</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Stop 'touchstart' from $collapse propagating to document 
+     */
+    $collapse.addEventListener('touchstart', function(e){
+        e.stopPropagation();
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     */
+    document.addEventListener('touchstart', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#博客" title="博客">博客</a>
+                        
+                    </div>
+                    <h1>【翻译】作为设计师必须知道的30个最具影响力的高质量网页设计博客（二）</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by Summer on September 2, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<p>原文链接：<a href="http://www.1stwebdesigner.com/design/influential-web-design-blogs/">http://www.1stwebdesigner.com/design/influential-web-design-blogs/</a></p>
+
+<blockquote>
+  <p><a href="http://www.1z1b.com/one-blog-a-week/influential-web-design-blogs/">作为设计师必须知道的30个最具影响力的高质量网页设计博客（一）</a></p>
+</blockquote>
+
+<h2 id="css-trickshttpcss-trickscom"><a href="http://css-tricks.com/">CSS-Tricks</a></h2>
+
+<p>CSS-Tricks是Chris Coyier公众博客，专门讲一些有关CSS的话题。不过近几年来，CSS-Tricks有了下面一些扩展：</p>
+
+<ul>
+  <li>
+    <p>Chris和Dave Rupert一起创造了<a href="http://shoptalkshow.com/">ShopTalk</a> 播客，在里面可以讨论所以有关网页设计和开发的事情。</p>
+  </li>
+  <li>
+    <p>Chris 出过几本书，做了一个 Lynda.com的Wordpress主题课程，并且他还创建了一个<a href="http://css-tricks.com/lodge/">The Lodge</a>的课程教人们学习如何制作一个颇具现代感的网站。</p>
+  </li>
+  <li>
+    <p>超多很酷的项目，像 CodePen，HTML-Ipsum， <a href="http://quotesondesign.com/">Quotes on Design</a> 。Chris真是个超有想法的人。</p>
+  </li>
+</ul>
+
+<p><img src="/wp-content/uploads/2013/08/csstricks-web-design-blog-top-blogs-follow.jpg" alt="csstricks-web-design-blog-top-blogs-follow" /></p>
+
+<p>CSS-Tricks 是 <a href="https://twitter.com/chriscoyier">Chris Coyier</a> 2007年建立的，总部在美国怀俄明州的密尔沃基，至今网站月页面访问量达270万。</p>
+
+<h3 id="section">网站亮点（这个网站的独特之处是什么？）：</h3>
+
+<ul>
+  <li>
+    <p>名人效应——Chris Coyier 是这么网站的精神领袖，他的个人风格贯穿于项目始终，是众多设计师的楷模。向他学习，同他一同去冒险吧！</p>
+  </li>
+  <li>
+    <p>趣味阅读——虽然我和Chris 没有私交，但感觉我们就像好基友一样，可能因为他在自己网站上的开放性吧。其实只是不断的浏览CSS-Tricks就是一种很好的体验，比如，看看CSS-Tricks这6年以来的<a href="http://css-tricks.com/design-history/">设计改版</a>。</p>
+  </li>
+  <li>
+    <p>选择你最喜欢的方式学习网页开发——视频（看）、录音（听）或者经典的文字阅读。在这里你可以学习 HTML, CSS, JavaScript, jQuery, PHP, WordPress还有网页设计行业的相关趋势。必须搞起呀！</p>
+  </li>
+</ul>
+
+<h3 id="css-tricks">CSS-Tricks 相关数据：</h3>
+
+<ul>
+  <li>
+    <p><a href="http://www.alexa.com/siteinfo/css-tricks.com">Alexa</a> 国际互联网流量排名：1737</p>
+  </li>
+  <li>
+    <p>Google PR值：7</p>
+  </li>
+  <li>
+    <p><a href="https://twitter.com/chriscoyier">Twitter</a>粉丝：74,021</p>
+  </li>
+  <li>
+    <p><a href="https://www.facebook.com/CSSTricks">Facebook</a>粉丝：16,018</p>
+  </li>
+  <li>
+    <p><a href="https://plus.google.com/101987072260327250694/posts">Google+</a>粉丝：15,970</p>
+  </li>
+  <li>
+    <p><a href="http://www.youtube.com/realcsstricks">Youtube</a>邮件订阅：6,177</p>
+  </li>
+</ul>
+
+<h3 id="section-1">上个月最受欢迎文章：</h3>
+
+<ul>
+  <li>
+    <p><a href="http://css-tricks.com/sass-style-guide/">Sass风格指南</a></p>
+  </li>
+  <li>
+    <p><a href="http://css-tricks.com/slider-with-sliding-backgrounds/">滑块与滑动背景</a></p>
+  </li>
+  <li>
+    <p><a href="http://css-tricks.com/logic-in-media-queries/">媒体查询的逻辑理论</a></p>
+  </li>
+</ul>
+
+<h2 id="speckyboy-design-magazinehttpspeckyboycom"><a href="http://speckyboy.com/">SpeckyBoy Design Magazine</a></h2>
+
+<p>Speckyboy 于2007年10月在苏格兰创建，最开始是 <a href="https://www.facebook.com/apaulandrew">Paul Andrew</a> 的个人网页设计网站。一路过来，Speckyboy 成了网络上最具影响的设计博客之一，每月页面访问量达190万。</p>
+
+<p>最有意思的是这个网站并没有实体办公室，团队成员都很喜欢这种美妙的网络生活方式，没有办公场所又算什么呢!</p>
+
+<p>Speckyboy提供独到深刻的教程,节省时间的技巧,最新有用的资源和启迪人心的艺术,同时涵盖web设计和开发、平面设计、广告、移动应用,甚至偶尔还有一些求职招聘。</p>
+
+<p><img src="/wp-content/uploads/2013/08/color.jpg" alt="color" /></p>
+
+<h3 id="section-2">网站亮点（这个网站的独特之处是什么？）：</h3>
+
+<ul>
+  <li>
+    <p>Speckyboy 是据我所知第一个有自己专门的 <a href="https://itunes.apple.com/gb/app/speckyboy/id569233932?mt=8">iPhone和 iPad app</a>的网页设计博客。你要是有Apple设备，一定要下载试试。</p>
+  </li>
+  <li>
+    <p>浏览索引，你会发现这些年Speckyboy一共发表了1800多篇文章。</p>
+  </li>
+  <li>
+    <p>网页设计趋势、各种超酷工具和网页设计灵感轻松愉快阅读。还有一些像<a href="http://speckyboy.com/category/twitter-news/">每周设计新闻</a>，<a href="http://speckyboy.com/category/deal-of-the-week/">每周出售</a>，<a href="http://speckyboy.com/category/web-mobile-creativity/">每周网页&amp;移动创意</a>等传统性阅读。</p>
+  </li>
+</ul>
+
+<h3 id="css-tricks-1">CSS-Tricks 相关数据：</h3>
+
+<ul>
+  <li>
+    <p><a href="http://www.alexa.com/siteinfo/speckyboy.com">Alexa</a> 国际互联网流量排名：5,084</p>
+  </li>
+  <li>
+    <p>Google PR值：6</p>
+  </li>
+  <li>
+    <p><a href="https://twitter.com/speckyboy">Twitter</a> 粉丝：50,111</p>
+  </li>
+  <li>
+    <p><a href="https://www.facebook.com/SpeckyboyDesignMagazine">Facebook</a> 粉丝：25,231</p>
+  </li>
+  <li>
+    <p><a href="https://plus.google.com/+SpeckyboyDesignMagazine/posts">Google+</a> 粉丝：5,238</p>
+  </li>
+</ul>
+
+<h3 id="section-3">上个月最受欢迎文章：</h3>
+
+<ul>
+  <li>
+    <p><a href="http://www.1z1b.com/one-blog-a-week/user-experience-trends-for-admin-dashboards/">管理仪表板用户体验趋势</a></p>
+  </li>
+  <li>
+    <p><a href="http://speckyboy.com/2013/05/29/20-free-flat-icon-sets/">20套免费扁平化图标</a></p>
+  </li>
+  <li>
+    <p><a href="http://speckyboy.com/2013/06/03/resources-for-learning-git/">Git学习资源</a></p>
+  </li>
+</ul>
+
+<h2 id="webdesigner-depothttpwwwwebdesignerdepotcom"><a href="http://www.webdesignerdepot.com/">Webdesigner Depot</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/webdesignerdepot-web-design-blog-top-blogs-follow.jpg" alt="webdesignerdepot-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="design-you-trusthttpdesignyoutrustcom"><a href="http://designyoutrust.com/">Design You Trust</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/designyoutrust-web-design-blog-top-blogs-follow.jpg" alt="designyoutrust-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="design-modohttpdesignmodocom"><strong><a href="http://designmodo.com/">Design Modo</a></strong></h2>
+
+<p><img src="/wp-content/uploads/2013/09/designmodo-web-design-blog-top-blogs-follow.jpg" alt="designmodo-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="design-shackhttpdesignshacknet"><a href="http://designshack.net/">Design Shack</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/designshack-web-design-blog-top-blogs-follow.jpg" alt="designshack-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="web-design-ledgerhttpwebdesignledgercom"><a href="http://webdesignledger.com/">Web Design Ledger</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/webdesignledger-web-design-blog-top-blogs-follow.jpg" alt="webdesignledger-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="six-revisionshttpsixrevisionscom"><a href="http://sixrevisions.com/">Six Revisions</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/sixrevisions-web-design-blog-top-blogs-follow.jpg" alt="sixrevisions-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="naldz-graphicshttpnaldzgraphicsnet"><a href="http://naldzgraphics.net/">Naldz Graphics</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/naldzgraphics-web-design-blog-top-blogs-follow.jpg" alt="naldzgraphics-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="noupehttpwwwnoupecom"><strong><a href="http://www.noupe.com/">Noupe</a></strong></h2>
+
+<p><img src="/wp-content/uploads/2013/09/noupe-web-design-blog-top-blogs-follow.jpg" alt="noupe-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="vandelay-design-bloghttpvandelaydesigncomblog"><a href="http://vandelaydesign.com/blog/">Vandelay Design Blog</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/vandelay-web-design-blog-top-blogs-follow.jpg" alt="vandelay-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="blog-spoon-graphicshttpblogspoongraphicscouk"><strong><a href="http://blog.spoongraphics.co.uk/">Blog Spoon Graphics</a></strong></h2>
+
+<p><img src="/wp-content/uploads/2013/09/spoongraphics-web-design-blog-top-blogs-follow.jpg" alt="spoongraphics-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="instantshifthttpwwwinstantshiftcom"><a href="http://www.instantshift.com/">InstantShift</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/instantshift-web-design-blog-top-blogs-follow.jpg" alt="instantshift-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="tutorialzinehttptutorialzinecom"><a href="http://tutorialzine.com/">TutorialZine</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/tutorialzine-web-design-blog-top-blogs-follow.jpg" alt="tutorialzine-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="boagworld--headscapehttpboagworldcom"><a href="http://boagworld.com/">BoagWorld : Headscape</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/boagworld-web-design-blog-top-blogs-follow.jpg" alt="boagworld-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="onextrapixelhttpwwwonextrapixelcom"><a href="http://www.onextrapixel.com/">OneXtraPixel</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/onextrapixel-web-design-blog-top-blogs-follow.jpg" alt="onextrapixel-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="the-david-walsh-bloghttpdavidwalshname"><a href="http://davidwalsh.name/">The David Walsh Blog</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/david-walsh-web-design-blog-top-blogs-follow.jpg" alt="david-walsh-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="treehouse-bloghttpblogteamtreehousecom"><strong><a href="http://blog.teamtreehouse.com/">TreeHouse Blog</a></strong></h2>
+
+<p><img src="/wp-content/uploads/2013/09/treehouse-web-design-blog-top-blogs-follow.jpg" alt="treehouse-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="web-designer-wallhttpwebdesignerwallcom"><strong><a href="http://webdesignerwall.com/">Web Designer Wall</a></strong></h2>
+
+<p><img src="/wp-content/uploads/2013/09/webdesignerwall-web-design-blog-top-blogs-follow.jpg" alt="webdesignerwall-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="a-list-aparthttpalistapartcom"><a href="http://alistapart.com/">A List Apart</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/alistapart-web-design-blog-top-blogs-follow.jpg" alt="alistapart-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="happycog-cognitionhttpcognitionhappycogcom"><a href="http://cognition.happycog.com/">HappyCog Cognition</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/happycog-cognition-web-design-blog-top-blogs-follow.jpg" alt="happycog-cognition-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="net-magazinehttpwwwnetmagazinecom"><a href="http://www.netmagazine.com/">.net Magazine</a></h2>
+
+<h2 id="net-magazine-web-design-blog-top-blogs-followwp-contentuploads201309net-magazine-web-design-blog-top-blogs-followjpg"><img src="/wp-content/uploads/2013/09/net-magazine-web-design-blog-top-blogs-follow.jpg" alt="net-magazine-web-design-blog-top-blogs-follow" /></h2>
+
+<p>##</p>
+
+<h2 id="linhttpline25come25-bloghttpline25com"><a href="http://line25.com/">Lin</a><a href="http://line25.com/">e25 Blog</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/line25-web-design-blog-top-blogs-follow.jpg" alt="line25-web-design-blog-top-blogs-follow" /></p>
+
+<h2 id="webappershttpwwwwebapperscom"><a href="http://www.webappers.com/">WebAppers</a></h2>
+
+<p><img src="/wp-content/uploads/2013/09/webappers-web-design-blog-top-blogs-follow.jpg" alt="webappers-web-design-blog-top-blogs-follow" /></p>
+
+<p>原文链接：<a href="http://www.1stwebdesigner.com/design/influential-web-design-blogs/">http://www.1stwebdesigner.com/design/influential-web-design-blogs/</a></p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start 
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/09/02/influential-web-design-blogs-2"
+                    data-title="【翻译】作为设计师必须知道的30个最具影响力的高质量网页设计博客（二）"
+                    data-url="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/09/02/influential-web-design-blogs-2/"
+                    data-images="http://1z1b.com/img/home-bg.jpg"
+                    data-content="原文链接：http://www.1stwebdesigner.com/design/influential-web-design-blogs/
+
+
+  作... | 曾 沙 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E8%AE%BE%E8%AE%A1/%E8%BD%AC%E8%BD%BD/2013/09/02/user-experience-trends-for-admin-dashboards/" data-toggle="tooltip" data-placement="top" title="后台控制面板设计欣赏">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/%E8%BD%AC%E8%BD%BD/2013/09/05/2013e68981e5b9b3e58c96e8aebee8aea1e7bb88e69e81e7a59ee599a8-e68981e5b9b3e58c96e8b584e6ba90e5a4a7e99b86e59088/" data-toggle="tooltip" data-placement="top" title="2013扁平化设计终极神器——扁平化资源大集合">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/09/02/influential-web-design-blogs-2"
+                        data-title="【翻译】作为设计师必须知道的30个最具影响力的高质量网页设计博客（二）"
+                        data-url="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/09/02/influential-web-design-blogs-2/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#设计" title="设计" rel="3">
+                                    设计
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#读书笔记" title="读书笔记" rel="2">
+                                    读书笔记
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#用户体验" title="用户体验" rel="2">
+                                    用户体验
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#2013" title="2013" rel="2">
+                                    2013
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#总结" title="总结" rel="2">
+                                    总结
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#photoshop" title="photoshop" rel="5">
+                                    photoshop
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#css" title="css" rel="2">
+                                    css
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#logo" title="logo" rel="8">
+                                    logo
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="2">
+                                    教程
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#扁平化设计" title="扁平化设计" rel="5">
+                                    扁平化设计
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字体" title="字体" rel="2">
+                                    字体
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#东涌" title="东涌" rel="4">
+                                    东涌
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#东西涌穿越" title="东西涌穿越" rel="4">
+                                    东西涌穿越
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#西涌" title="西涌" rel="4">
+                                    西涌
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字母" title="字母" rel="2">
+                                    字母
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://zengsha.me">曾沙</a></li>
+                    
+                        <li><a href="http://1z1b.com">一周一博</a></li>
+                    
+                        <li><a href="https://coding.net">Coding</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = '曾沙';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/zengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/izengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/happyzsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/happysha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 曾 沙 2016
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'zengsha.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

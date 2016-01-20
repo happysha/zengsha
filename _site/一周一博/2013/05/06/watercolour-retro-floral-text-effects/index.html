@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="狮子座，产品经理型设计师，猴妈">
+    <meta name="keyword"  content="曾沙">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>100+创意字体欣赏和文字特效案例教程（七）——水彩画、复古、花香特效 - 曾 沙</title>
+
+    <link rel="canonical" href="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/2013/05/06/watercolour-retro-floral-text-effects/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">曾 沙</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Stop 'touchstart' from $collapse propagating to document 
+     */
+    $collapse.addEventListener('touchstart', function(e){
+        e.stopPropagation();
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     */
+    document.addEventListener('touchstart', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>100+创意字体欣赏和文字特效案例教程（七）——水彩画、复古、花香特效</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by happysha on May 6, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<blockquote>
+
+</blockquote>
+
+<blockquote>
+
+  <h3 id="section"><strong>分类目录：</strong></h3>
+
+  <p>一、<a href="http://www.1z1b.com/one-blog-a-week/metal-glod-copper-text-effects/">金属、黄金、铜特效</a></p>
+</blockquote>
+
+<p>二、<a href="http://www.1z1b.com/one-blog-a-week/fire-smoke-water-text-effects/">火、烟、水、冰、霜特效</a></p>
+
+<p>三、<a href="http://www.1z1b.com/one-blog-a-week/3d-text-effects/">3D特效</a></p>
+
+<p>四、<a href="http://www.1z1b.com/one-blog-a-week/wood-plastic-abric-text-effects/">木头、塑料、织物、肌理特效</a></p>
+
+<p>五、<a href="http://www.1z1b.com/one-blog-a-week/light-glass-text-effects/">光、玻璃特效</a></p>
+
+<p>六、<a href="http://www.1z1b.com/one-blog-a-week/mess-scratch-cartoon-text-effects/">脏乱、划痕、卡通特效</a></p>
+
+<p>七、<a href="http://www.1z1b.com/one-blog-a-week/watercolour-retro-floral-text-effects/">水彩画、复古、花香特效</a></p>
+
+<p>八、<a href="http://www.1z1b.com/one-blog-a-week/practical-text-effects/">实用特效</a></p>
+
+<h2 id="section-1">七、水彩画、复古、花香特效</h2>
+
+<p>1、<a href="http://demen1.deviantart.com/art/BLACKOUT-POSTER-80310858">BLACKOUT海报</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/Black-out-Poster_thumb.jpg" alt="Black-out-Poster_thumb" /></p>
+
+<p>2、<a href="http://www.psd-dude.com/tutorials/photoshop.aspx?t=create-a-sketch-text-in-photoshop">素描字</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/text-effect-tutorials-181.jpg" alt="text-effect-tutorials-18" /></p>
+
+<p>3、<a href="http://psd.tutsplus.com/tutorials/text-effects-tutorials/scary-text-effect/">诡异文字效果</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/text-effect-tutorials-071.jpg" alt="text-effect-tutorials-07" /></p>
+
+<p>4、<a href="http://psd.tutsplus.com/tutorials/text-effects-tutorials/vintage-typography/">用Illustrator和Photoshop创建老式文字</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/Create_Detailed_Vintage_Typography_with_Illustrator_and_Photoshop.jpg" alt="Create_Detailed_Vintage_Typography_with_Illustrator_and_Photoshop" /></p>
+
+<p>5、<a href="http://textuts.com/old-decorated-metal-text-effect/">古老的金属文字</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/Old_Decorated_Metal_Text_Effect.jpg" alt="Old_Decorated_Metal_Text_Effect" /></p>
+
+<p>6、<a href="http://www.psdvault.com/text-effects/create-an-ancient-stone-text-effect-inspired-by-the-elder-scrolls-v-skyrim-game-in-photoshop/">盘古顽石</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/Create_an_Ancient_Stone_Text_Effect_Inspired_by_The_Elder_Scrolls_SKYRIM_Game_in_Photoshop.jpg" alt="Create_an_Ancient_Stone_Text_Effect_Inspired_by_The_Elder_Scrolls_SKYRIM_Game_in_Photoshop" /></p>
+
+<p>7、<a href="http://www.blog.spoongraphics.co.uk/tutorials/create-a-cool-wet-ink-typography-effect-in-photoshop">湿墨效果</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/24-02_photoshop_text_effect_wet_ink.jpg" alt="24-02_photoshop_text_effect_wet_ink" /></p>
+
+<p>8、<a href="http://www.psdvault.com/drawing/create-a-transparent-text-effect-with-fresh-grass-texture-and-custom-brushset/">伴着草香的透明字</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/24-07_photoshop_text_effect_transparent_grass.jpg" alt="24-07_photoshop_text_effect_transparent_grass" /></p>
+
+<p>9、<a href="http://webdesignledger.com/tutorials/create-a-new-retro-text-effect-in-photoshop">复古发光感</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/24-04_photoshop_text_effect_retro.jpg" alt="24-04_photoshop_text_effect_retro" /></p>
+
+<p>10、<a href="http://psd.tutsplus.com/tutorials/text-effects-tutorials/how-to-quickly-create-a-stylish-retro-text-effect/">时尚复古效果</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/24-14_photoshop_text_effect_stylish_retro.jpg" alt="24-14_photoshop_text_effect_stylish_retro" /></p>
+
+<p>11、<a href="http://wegraphics.net/blog/tutorials/how-to-illustrate-a-steampunk-type-treatment-in-photoshop/">蒸汽朋克文字处理</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/photoshop-tutorials-2012-jan-1.jpg" alt="photoshop-tutorials-2012-jan-1" /></p>
+
+<p>12、<a href="http://abduzeedo.com/realistic-letterpress-effect-photoshop">逼真的凸版印刷效果</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/photoshop-tutorials-2012-jan-3.jpg" alt="photoshop-tutorials-2012-jan-3" /></p>
+
+<p>13、<a href="http://abduzeedo.com/medieval-metal-text-effect-photoshop">中世纪金属文字效果</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/photoshop-tuts-2012-jan-5.jpg" alt="photoshop-tuts-2012-jan-5" /></p>
+
+<p>14、<a href="http://abduzeedo.com/vintage-typography-experiment-illustrator-and-photoshop">老式字体</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/photoshop-tutorials-2011-oct-6.jpg" alt="photoshop-tutorials-2011-oct-6" /></p>
+
+<p>15、<a href="http://design.creativefan.com/vintage-typography-tutorial/">装饰性老式字体</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/photoshop-tutorials-2011b-nov-6.jpg" alt="photoshop-tutorials-2011b-nov-6" /></p>
+
+<p>16、<a href="http://www.gomediazine.com/tutorials/old-school-type-line-gradients/">老式学院样式</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/dragonforce-final.jpg" alt="dragonforce-final" /></p>
+
+<p>17、<a href="http://www.gomediazine.com/tutorials/old-school-type-line-gradients/">明亮的花纹字体</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/floral.jpg" alt="floral" /></p>
+
+<p>18、<a href="http://www.blog.spoongraphics.co.uk/tutorials/create-a-cool-wet-ink-typography-effect-in-photoshop">湿墨文字特效</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/ink.jpg" alt="ink" /></p>
+
+<p>19、<a href="http://drawingclouds.com/2009/05/create-a-frilly-2009-typo/">镶褶边的2009文字特效</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/2009-1.jpg" alt="2009 (1)" /></p>
+
+<p>20、<a href="http://www.tutorial9.net/photoshop/create-a-retro-pop-style-wallpaper/">复古流行字体</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/retro.jpg" alt="retro" /></p>
+
+<p>21、<a href="http://abduzeedo.com/super-cool-frilly-bits-typography">超级酷的褶边排版</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/bits.jpg" alt="bits" /></p>
+
+<p>22、<a href="http://pshero.com/archives/watercolor-text">水彩文字</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/hero2.jpg" alt="hero2" /></p>
+
+<p>23、<a href="http://psd.tutsplus.com/tutorials/designing-tutorials/dynamic-recessed-watercolor-typography-in-photoshop/">动态嵌入式水彩文字</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/tuts2.jpg" alt="tuts2" /></p>
+
+<p>24、<a href="http://www.photoshopstar.com/text/delicate-text-effect/">精致的Photoshop文字特效</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/deli.jpg" alt="deli" /></p>
+
+<p>25、<a href="http://pshero.com/archives/the-sugar-bag-effect">糖袋文字</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/sugar.jpg" alt="sugar" /></p>
+
+<p>26、<a href="http://photoshoptutorials.ws/photoshop-tutorials/text-effects/retro-text.html">复古线条文字</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/retro-1.jpg" alt="retro (1)" /></p>
+
+<p>27、<a href="http://abduzeedo.com/awesome-floral-type-fireworks-and-photoshop-5-minutes">不错的花纹字体</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/give.jpg" alt="give" /></p>
+
+<p>28、<a href="http://abduzeedo.com/awesome-floral-type-fireworks-and-photoshop-5-minutes">彩色花纹字体</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/giveaway2.jpg" alt="giveaway2" /></p>
+
+<p>29、<a href="http://www.gomediazine.com/tutorials/80s-style-design-photoshop/">80年代风格</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/leave.jpg" alt="leave" /></p>
+
+<p>30、<a href="http://psd.tutsplus.com/tutorials/text-effects-tutorials/how-to-make-a-typographic-retro-space-face/">复古文字排版的头像</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/Final3.jpg" alt="Final3" /></p>
+
+<p>31、<a href="http://psd.tutsplus.com/tutorials/text-effects-tutorials/how-to-create-a-richly-ornate-typographic-illustration/">华丽的文字插图</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/final_large.jpg" alt="final_large" /></p>
+
+<p>32、<a href="http://www.psdrockstar.com/text-effects/floral-text-wallpaper/">花纹</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/floral2.jpg" alt="floral2" /></p>
+
+<p>33、<a href="http://hv-designs.co.uk/2008/02/17/need-for-speed-pro-street-stencil-tutorial/">街头蜡纸效果</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/prostreet.png" alt="prostreet" /></p>
+
+<p>34、<a href="http://psdlearning.com/2008/09/stylish-floral-typography/">时髦花纹</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/floral-1.jpg" alt="floral (1)" /></p>
+
+<p>35、<a href="http://textuts.com/fantasy-spring-text-effect/">幻想弹簧文字效果</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/Fantasy-Spring-Text-Effect1.jpg" alt="Fantasy-Spring-Text-Effect" /></p>
+
+<p>36、<a href="http://textuts.com/colorful-retro-text-effect/">彩色复古的文字效果</a></p>
+
+<p><img src="/wp-content/uploads/2013/04/Colorful-Retro-Text-Effect.jpg" alt="Colorful-Retro-Text-Effect" /></p>
+
+<p>37、<a href="https://tutsplus.com/tutorial/retro-neon-sign/?WT.mc_id=premium_psdtuts_ed">Photoshop高级技能从头开始创建复古标志牌</a></p>
+
+<p><img src="/wp-content/uploads/2013/05/Premium_208_Sign_retrosign_finalg.jpg" alt="Premium_208_Sign_retrosign_finalg" /></p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start 
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/2013/05/06/watercolour-retro-floral-text-effects"
+                    data-title="100+创意字体欣赏和文字特效案例教程（七）——水彩画、复古、花香特效"
+                    data-url="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/2013/05/06/watercolour-retro-floral-text-effects/"
+                    data-images="http://1z1b.com/img/home-bg.jpg"
+                    data-content="
+
+
+
+
+
+  分类目录：
+
+  一、金属、黄金、铜特效
+
+
+二、火、烟、水、冰、霜特效
+
+三、3D特效
+
+四、木头、塑料、织物、肌理特效
+
+五、光、玻璃... | 曾 沙 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/2013/05/06/mess-scratch-cartoon-text-effects/" data-toggle="tooltip" data-placement="top" title="100+创意字体欣赏和文字特效案例教程（六）——脏乱、划痕、卡通特效">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/2013/05/06/practical-text-effects/" data-toggle="tooltip" data-placement="top" title="100+创意字体欣赏和文字特效案例教程（八）——实用特效">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/2013/05/06/watercolour-retro-floral-text-effects"
+                        data-title="100+创意字体欣赏和文字特效案例教程（七）——水彩画、复古、花香特效"
+                        data-url="http://1z1b.com/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/2013/05/06/watercolour-retro-floral-text-effects/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#设计" title="设计" rel="3">
+                                    设计
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#读书笔记" title="读书笔记" rel="2">
+                                    读书笔记
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#用户体验" title="用户体验" rel="2">
+                                    用户体验
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#2013" title="2013" rel="2">
+                                    2013
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#总结" title="总结" rel="2">
+                                    总结
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#photoshop" title="photoshop" rel="5">
+                                    photoshop
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#css" title="css" rel="2">
+                                    css
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#logo" title="logo" rel="8">
+                                    logo
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="2">
+                                    教程
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#扁平化设计" title="扁平化设计" rel="5">
+                                    扁平化设计
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字体" title="字体" rel="2">
+                                    字体
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#东涌" title="东涌" rel="4">
+                                    东涌
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#东西涌穿越" title="东西涌穿越" rel="4">
+                                    东西涌穿越
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#西涌" title="西涌" rel="4">
+                                    西涌
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字母" title="字母" rel="2">
+                                    字母
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://zengsha.me">曾沙</a></li>
+                    
+                        <li><a href="http://1z1b.com">一周一博</a></li>
+                    
+                        <li><a href="https://coding.net">Coding</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = '曾沙';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/zengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/izengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/happyzsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/happysha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 曾 沙 2016
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'zengsha.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

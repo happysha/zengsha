@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="狮子座，产品经理型设计师，猴妈">
+    <meta name="keyword"  content="曾沙">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>如何设计一个“高大上”的 logo - 曾 沙</title>
+
+    <link rel="canonical" href="http://1z1b.com/%E8%AE%BE%E8%AE%A1/%E8%AE%BE%E8%AE%A1%E7%90%86%E8%AE%BA/2014/10/31/how-to-design-a-great-logo/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">曾 沙</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Stop 'touchstart' from $collapse propagating to document 
+     */
+    $collapse.addEventListener('touchstart', function(e){
+        e.stopPropagation();
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     */
+    document.addEventListener('touchstart', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>如何设计一个“高大上”的 logo</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by Summer on October 31, 2014</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<p>前不久，我们老大写的一篇博客《 <a href="http://blog.coding.net/blog/coding_the_product_and_design">Coding，做一个有情怀的产品</a> 》中有提到设计 Coding logo 的大致由来，今天我就设计 Coding 猴头的过程具体说说如何设计一个 logo。方法仅供参考，如有雷同，纯属巧合…</p>
+
+<h2 id="logo">第一步：搞清楚需求——我们需要一个什么样的 logo</h2>
+
+<blockquote>
+  <p>工具：交流（如果这也算的话）</p>
+</blockquote>
+
+<p>对于整个 Coding 的 logo，老大跟我说明了他的想法，主要思路是：卡通形象（猴子）+CODING 字样，logo 上可以加我们的 slogan——Cloud Development。</p>
+
+<p>其实想到猴子这个形象并不复杂，因为我们服务的用户是程序“猿”，很自然得想到了更加可爱的猴子；当然我们也想过是不是可以用其他的形象代替，但一直没有找到更好的。</p>
+
+<p>讨论的结论是——一定要高大上，碉堡了！</p>
+
+<p>是的，作为一个互联网公司，我们一定要紧跟潮流，不能做出那种 out 了的 logo，同时我们希望自己能给用户一种亲切的感觉，而且要一眼能被人记住。</p>
+
+<p>于是，就有了一些关键词——猴子、扁平、简洁、可爱。</p>
+
+<h2 id="section">第二步：思维导图</h2>
+
+<blockquote>
+  <p>工具：白纸、铅笔</p>
+</blockquote>
+
+<p>思维导图我们从小就接触过（上语文课老师大括号里面列出来的总结）其实并不是一个高大上的东西，但思维导图确实是一个能很好的帮助我们发散思维的方式，一支笔，一张纸就好。当然你也可以借助一些专业的思维导图软件。</p>
+
+<p>下图是我设计猴头时所画的思维导图：</p>
+
+<p><a href="https://dn-coding-net-production-pp.qbox.me/13323100-54bd-4eb9-b24c-b4719a5c5f5c.JPG"><img src="https://dn-coding-net-production-pp.qbox.me/13323100-54bd-4eb9-b24c-b4719a5c5f5c.JPG" alt="图片" /></a>我深刻感觉我贴出这张图会让我掉粉，这字… 我保证这绝对不是我的正常水平！</p>
+
+<p>确实我这个思维导图并不是很美观，思维也只是简单的发散，大家自己在设计从一个关键词去构建整个思维导图时，尽量去发散，寻找更多的可能性，不要局限自己的思维。</p>
+
+<p>至于如何画好思维导图，大家可以网上找一些资料或者买本书看看。</p>
+
+<p>虽然图画的丑，但并不能阻止我得到一些可用的关键词：</p>
+
+<p>猴子——猴头、帽子、可爱、大耳猴、眼睛、眺望…</p>
+
+<p>利用这些关键词，我得开始寻找“灵感”，把想法图形化出来。就有了下一步——绘制草图。</p>
+
+<h2 id="section-1">第三步：草图</h2>
+
+<blockquote>
+  <p>工具：白纸、铅笔和网络</p>
+</blockquote>
+
+<p>纸笔是最简单也最好用的画草图的工具，你的思维不会受限于电脑的各种操作，会更开放，姿势会更随意舒适。</p>
+
+<p>所谓灵感，其实就是根据你的需求去寻找一个与之契合的点，然后表达出来。</p>
+
+<p>动手画草图，看着这些关键词，你也许会没有任何想法。没关系，网络便是最直接获取灵感的方式。但为什么还需要网络？因为我们不可能凭空想象所有的东西，特别是当我们思维被局限在某一点时，我们需要靠各种各样的图片去打开自己的思维。但不一定说你设计 logo 就一定要去欣赏各种漂亮的 logo，你可以看随便点进去看，摄影、绘画、广告设计、服装…更不是说你直接去抄一个 logo，而是根据你的关键词寻找与你想要的东西的相关画面。</p>
+
+<p>其实说实话，因为我并不是专业学美术出身的（我是学计算机的，我自豪，哈哈），上面一些关键词我并不能很好的想像它究竟会是怎么样子的。我会 Google 了倒挂在树上的猴子的图片，看它们究竟是什么姿势；看看假如猴子带个帽子会是什么样子；还有看怎么用漫画的形式表现一个猴子（因为我们的 logo 必须简单，真实的猴子形象太复杂了，我必须学学如何简化真实的猴子）…</p>
+
+<p><a href="https://dn-coding-net-production-pp.qbox.me/1d1df24e-f2a9-4faa-b9f1-a4a0fd892c6a.jpg"><img src="https://dn-coding-net-production-pp.qbox.me/1d1df24e-f2a9-4faa-b9f1-a4a0fd892c6a.jpg" alt="图片" /></a>（Google 搜索倒挂的猴子）</p>
+
+<p>同时，我会参考各种 logo，我上 dribbble 找一些我去找我们这个行业的 logo，不只是有猴子形状的 logo，而且我会参考一些互联网公司的 logo。</p>
+
+<p><a href="https://dn-coding-net-production-pp.qbox.me/497e4208-cc19-4ac9-b367-7a2b15891990.jpg"><img src="https://dn-coding-net-production-pp.qbox.me/497e4208-cc19-4ac9-b367-7a2b15891990.jpg" alt="图片" /></a>（在 Dribbble 上搜索有关猴子的图片）</p>
+
+<p><a href="https://dn-coding-net-production-pp.qbox.me/666610d7-1771-44fa-b357-970bed50ccb0.jpg"><img src="https://dn-coding-net-production-pp.qbox.me/666610d7-1771-44fa-b357-970bed50ccb0.jpg" alt="图片" /></a>（一些漂亮的 logo）</p>
+
+<p>也许有人会说，你不就是想抄别人的么！没错，确实是这样，我相信应该没有一个设计师敢说自己的设计没有任何“抄”（其实我们更愿意说借鉴）。</p>
+
+<p>在设计的时候不要去抵制看各种优秀的作品，唯一你要确认的是，你是在做适合这个主题的东西，不是一味的生搬硬套。</p>
+
+<p>看了很多之后，于是有了下面的草图。因为是草图，所以很草…</p>
+
+<p><a href="https://dn-coding-net-production-pp.qbox.me/daa78d01-3c25-4895-912c-5043899a64a5.JPG"><img src="https://dn-coding-net-production-pp.qbox.me/daa78d01-3c25-4895-912c-5043899a64a5.JPG" alt="图片" /></a><a href="https://dn-coding-net-production-pp.qbox.me/3cd5091e-ea09-4f5c-894d-d5ef9f26d515.JPG"><img src="https://dn-coding-net-production-pp.qbox.me/3cd5091e-ea09-4f5c-894d-d5ef9f26d515.JPG" alt="图片" /></a>画好草图，找老大商量看看哪些是可行的，然后选择感觉合适的图形进行矢量化。上面草图左下角的那个猴子便是候选之一。</p>
+
+<h2 id="logo-">第四步：logo 数字化</h2>
+
+<blockquote>
+  <p>工具：AI（当然你也可以用 PS 或者 CDR 等）</p>
+</blockquote>
+
+<p>当有了好的想法，数字化其实是最简单的工作了，不过要得到一个完美的 logo 确实需要不断地优化。</p>
+
+<p>下面的图片是一些猴头的优化过程，中间那个是最后你们在网站上看到的那个猴头。</p>
+
+<p><a href="https://dn-coding-net-production-pp.qbox.me/a0765dae-0b6d-4911-bb8f-c42ab2633bcf.jpg"><img src="https://dn-coding-net-production-pp.qbox.me/a0765dae-0b6d-4911-bb8f-c42ab2633bcf.jpg" alt="图片" /></a>这个猴头基本上就是以圆/椭圆为基本形状去变化的，得到基本的形状后再进行视觉上的调整(其实这个过程并没能准确化，我能说我是凭感觉的么…)，所以得到的图片并不是那种完全符合数学规范得到的 logo，人眼看着舒服也是一种标准，相信自己的眼睛也是一种方法。</p>
+
+<p>不过我也可以举一个完全数字化的例子，下面这个 CLOUD 是我以前的一个练习，它就是完全用各种正圆切出来的，这种图形通常会给人一种很牛逼的感觉，有木有？</p>
+
+<p><a href="https://dn-coding-net-production-pp.qbox.me/9e6b4784-445c-486d-8a98-7b3b86943f99.jpg"><img src="https://dn-coding-net-production-pp.qbox.me/9e6b4784-445c-486d-8a98-7b3b86943f99.jpg" alt="图片" /></a>不过也要分情况，并不是所有的 logo 都试用于这样的方式去发展，就像我们可爱的猴头，哈哈…</p>
+
+<p>来个大头！</p>
+
+<p><a href="https://dn-coding-net-production-pp.qbox.me/1a74e1aa-a728-47c6-82f0-0d300771082c.jpg"><img src="https://dn-coding-net-production-pp.qbox.me/1a74e1aa-a728-47c6-82f0-0d300771082c.jpg" alt="图片" /></a></p>
+
+<h2 id="section-2">第五步：最后，来个完美组合</h2>
+
+<p>我们的 Coding 字样和猴头是分开设计的，文字 logo 的设计过程和猴头是一样的，具体的过程我就不说了。</p>
+
+<p>不过，最后的结果得他们俩完美结合，感觉上一定要统一。最开始，我设计的字体问题太细，导致两边不平衡，经过调整得到最后的结果。</p>
+
+<p><a href="https://dn-coding-net-production-pp.qbox.me/e49528d6-512f-4ce3-aa97-01c22ddd2101.jpg"><img src="https://dn-coding-net-production-pp.qbox.me/e49528d6-512f-4ce3-aa97-01c22ddd2101.jpg" alt="图片" /></a>好啦，看到这里不知道大家对如何设计一个 logo 有没有感觉了呢？最后给大家推荐一本书——《超越 LOGO 设计》，上文中的方法基本来源于这本书，让我从一个完全不知道如何开始的状态到现在也做出了几个能拿得出手的 logo 。</p>
+
+<p>欢迎大家到 <a href="https://coding.net/">Coding.net</a> 粉我，哈哈，我是 <a href="https://coding.net/u/zengsha">Summer</a>，有什么好的意见也可以私信我！</p>
+
+<blockquote>
+  <p><img src="https://dn-coding-net-production-static.qbox.me/8307b0fb-d593-470b-a363-edb1195f899f.jpg?imageMogr2/auto-orient/format/jpeg/crop/!640x640a0a0/thumbnail/80" alt="" /></p>
+
+  <h3 id="summerhttpscodingnetuzengsha"><a href="https://coding.net/u/zengsha">Summer</a></h3>
+
+  <p>做最了解程序员的设计师</p>
+</blockquote>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start 
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/%E8%AE%BE%E8%AE%A1/%E8%AE%BE%E8%AE%A1%E7%90%86%E8%AE%BA/2014/10/31/how-to-design-a-great-logo"
+                    data-title="如何设计一个“高大上”的 logo"
+                    data-url="http://1z1b.com/%E8%AE%BE%E8%AE%A1/%E8%AE%BE%E8%AE%A1%E7%90%86%E8%AE%BA/2014/10/31/how-to-design-a-great-logo/"
+                    data-images="http://1z1b.com/img/home-bg.jpg"
+                    data-content="前不久，我们老大写的一篇博客《 Coding，做一个有情怀的产品 》中有提到设计 Coding logo 的大致由来，今天我就设计 Coding 猴头的过... | 曾 沙 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/%E4%B8%80%E5%91%A8%E4%B8%80%E5%8D%9A/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/%E8%AE%BE%E8%AE%A1/2014/05/05/fonts-practice-2/" data-toggle="tooltip" data-placement="top" title="一首歌一个字——字体练习（二）">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/%E8%AE%BE%E8%AE%A1/%E8%AE%BE%E8%AE%A1%E7%90%86%E8%AE%BA/2014/10/31/how-to-design-a-great-logo"
+                        data-title="如何设计一个“高大上”的 logo"
+                        data-url="http://1z1b.com/%E8%AE%BE%E8%AE%A1/%E8%AE%BE%E8%AE%A1%E7%90%86%E8%AE%BA/2014/10/31/how-to-design-a-great-logo/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#设计" title="设计" rel="3">
+                                    设计
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#读书笔记" title="读书笔记" rel="2">
+                                    读书笔记
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#用户体验" title="用户体验" rel="2">
+                                    用户体验
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#2013" title="2013" rel="2">
+                                    2013
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#总结" title="总结" rel="2">
+                                    总结
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#photoshop" title="photoshop" rel="5">
+                                    photoshop
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#css" title="css" rel="2">
+                                    css
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#logo" title="logo" rel="8">
+                                    logo
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="2">
+                                    教程
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#扁平化设计" title="扁平化设计" rel="5">
+                                    扁平化设计
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字体" title="字体" rel="2">
+                                    字体
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#东涌" title="东涌" rel="4">
+                                    东涌
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#东西涌穿越" title="东西涌穿越" rel="4">
+                                    东西涌穿越
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#西涌" title="西涌" rel="4">
+                                    西涌
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字母" title="字母" rel="2">
+                                    字母
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://zengsha.me">曾沙</a></li>
+                    
+                        <li><a href="http://1z1b.com">一周一博</a></li>
+                    
+                        <li><a href="https://coding.net">Coding</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = '曾沙';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/zengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/izengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/happyzsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/happysha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 曾 沙 2016
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'zengsha.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

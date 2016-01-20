@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="狮子座，产品经理型设计师，猴妈">
+    <meta name="keyword"  content="曾沙">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>【翻译】精彩网格式网页设计赏析 - 曾 沙</title>
+
+    <link rel="canonical" href="http://1z1b.com/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/04/19/grid-website-designs/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">曾 沙</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Stop 'touchstart' from $collapse propagating to document 
+     */
+    $collapse.addEventListener('touchstart', function(e){
+        e.stopPropagation();
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     */
+    document.addEventListener('touchstart', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#网格" title="网格">网格</a>
+                        
+                    </div>
+                    <h1>【翻译】精彩网格式网页设计赏析</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by Summer on April 19, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<p>现在大量网页设计基于网格布局。虽说人们通常注意不到它，但杂乱无章的布局时代确实已经过去了，现在是整齐结构化的天下。无论从理论、美学和整齐来说，这样的布局都很好平衡。网格结构是所有现代网站的基础，它总能给最终用户完美无暇的设计。</p>
+
+<p>尽管通常网格设计仅仅是在规定的间隔下用没有任何多余修饰的水平线和垂直线的交叉，但很多设计师们也会用一些明显突出的几何图形来修饰网格。通常我们会在展示类、博客和新闻相关的网站看到清晰的网格，但有时也有一些个人网站或其他创意网站通过巧妙的处理网格吸引用户目光。不奇怪，它除了功能上的基本优势外还有：</p>
+
+<ul>
+  <li>
+    <p>创造视觉通道引导用户；</p>
+  </li>
+  <li>
+    <p>分类展示信息；</p>
+  </li>
+  <li>
+    <p>整合不同的部分同时能让他们自我独立开；</p>
+  </li>
+</ul>
+
+<p>它也为完美展示穿针引线。在下面这些案例中你会发现那些引人注目的网站设计都技巧性地使用了能一眼察觉的网格。</p>
+
+<h2 id="section">基于网格的网页设计案例</h2>
+
+<p><a href="http://www.spaziodipaolo.it/"><strong>Spazio Dipaolo</strong></a> 把主页划分成相等方块加上黑色透明蒙版来展示不同类型的艺术图片。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Spazio-Dipaolo.jpg" alt="Spazio-Dipaolo" /></p>
+
+<p><strong><a href="http://berndkammerer.com/">Bernd Kammerer</a> </strong>用三列布局，每一列有自己的图片流用来展示不同明度图片。此外，当你滚动下拉网站其他图片的红色圆形链接会交替出现。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Bernd-Kammerer.jpg" alt="Bernd-Kammerer" /></p>
+
+<p><a href="http://mrahayes.com/"><strong>Adam Hayes</strong></a> 顺序展示了那些满是色彩和图形的惊人艺术作品。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Adam-Hayes.jpg" alt="Adam-Hayes" /></p>
+
+<p><a href="http://www.nectodigital.es/"><strong>Necto</strong> </a>利用大小不一但相对平衡的网格来突出以前的项目，不同大小代表不同的强调程度，尺寸越大代表它的复杂程度越高。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Necto.jpg" alt="Necto" /></p>
+
+<p><a href="http://salon.io/"><strong>Salon</strong> </a>是另一个不均匀网格的好案例，行的位置跟随列变。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Salon.jpg" alt="Salon" /></p>
+
+<p><a href="http://www.christmasgifs.org/"><strong>Christmas Gifs</strong></a> 用清晰均匀的网格展示圣诞节的各种动态gif图片。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Christmas-Gifs.jpg" alt="Christmas-Gifs" /></p>
+
+<p><strong><a href="http://www.activation-group.com/">Activation Group</a> </strong>是用黑色蒙版的绝好案例，每个单元格都有自己单独的蒙版。这样的变化加上限制色彩使用给主页一种棋盘的感觉。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Activation-Group.jpg" alt="Activation-Group" /></p>
+
+<p><a href="http://www.portinari.org.br/"><strong>Portal Portinari</strong> </a>是一个完全动态的网站，它用时间线在基于网格的“画廊”上展示了不同时期的艺术家的杰作，这些图片占据了整个首页。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Portal-Portinari.jpg" alt="Portal-Portinari" /></p>
+
+<p><a href="http://www.candybuffet.es/"><strong>Candy Buffet</strong></a> 用明亮的颜色和纯几何形状搭配出现代干净清晰的平面风格。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Candy-Buffet.jpg" alt="Candy-Buffet" /></p>
+
+<p><a href="http://betelnyc.com/"><strong>Betel Bar and Kitchen</strong></a> 整齐地组织登陆页、和谐地整合图片和文本块给人以震撼感。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Betel-Bar-and-Kitchen.jpg" alt="Betel-Bar-and-Kitchen" /></p>
+
+<p><a href="http://rvlt.com/"><strong>RVLT</strong></a> 展示了这样的主页——把导航链接和位置多变方形的商品项目结合在一块。</p>
+
+<p><img src="/wp-content/uploads/2013/04/RVLT.jpg" alt="RVLT" /></p>
+
+<p><a href="http://www.stefan-froescher.eu/"><strong>Stefan Froescher</strong> </a>标准的左边项目列表，右边展示图片。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Stefan-Froescher.jpg" alt="Stefan-Froescher" /></p>
+
+<p><strong><a href="http://www.jean-georges.com/">Jean-Georges</a> </strong>超大图片的导航系统，也可理解为是基于网格的。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Jean-Georges.jpg" alt="Jean-Georges" /></p>
+
+<p><a href="http://www.silktricky.com/"><strong>SilkTricky</strong></a> 把每个单元分成两半——一半图片，一半文字。而且设计师们增加个几个大方块幻灯效果让网格看起来很不一样。</p>
+
+<p><img src="/wp-content/uploads/2013/04/SilkTricky.jpg" alt="SilkTricky" /></p>
+
+<p><a href="http://bastianpreussger.com/"><strong>Bastian Preussger</strong></a> 看起来格外神秘独特，黑色单色背景和适度混乱的网格展示艺术作品缩图。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Bastian-Preussger.jpg" alt="Bastian-Preussger" /></p>
+
+<p><strong><a href="http://danielvane.com/">Daniel Vane</a> </strong>大量的黑白配色和规矩的网格让网站看起来干净漂亮。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Daniel-Vane.jpg" alt="Daniel-Vane" /></p>
+
+<p><a href="http://rosasnco.ch/films"><strong>Rosas and Co Films AG</strong></a> 通过网格系统用最常见的方法过滤展示结果排列这些视频截图。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Rosas-and-Co-Films-AG.jpg" alt="Rosas-and-Co-Films-AG" /></p>
+
+<p><a href="http://www.farfromthetree.com/"><strong>Far From the Tree</strong></a> 首页整版的缩略图形成了一个完美而详细的网格，尽管对一个网站来说有点笨重和混乱。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Far-From-the-Tree.jpg" alt="Far-From-the-Tree" /></p>
+
+<p><a href="http://prixboomerang.com/"><strong>Boomerang 2013</strong></a> 确实有爆炸的气氛。整个设计聚焦用户，动员他们参与到独特壮观的动画里来。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Boomerang-2013.jpg" alt="Boomerang-2013" /></p>
+
+<p><a href="http://bobby.se/"><strong>Bobby Digital Studios</strong></a> 确实不错，有序、准确地展示他们的工作让用户马上能够了解他们。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Bobby-Digital-Studios.jpg" alt="Bobby-Digital-Studios" /></p>
+
+<p><a href="http://hommard.com/"><strong>Hommard</strong></a> 看起来时尚精致。网站在网格上展示了一系列高质量图片。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Hommard.jpg" alt="Hommard" /></p>
+
+<p><a href="http://www.nationaltraveller.com/"><strong>National Traveller</strong></a> 是一个有着大量的长方形的功能块且结构非常好的常规博客。</p>
+
+<p><img src="/wp-content/uploads/2013/04/National-Traveller.jpg" alt="National-Traveller" /></p>
+
+<p><a href="http://www.mypoorbrain.com/"><strong>My Poor Brain</strong></a> 很好的利用了这些狭窄的列来尽可能展示更多信息。</p>
+
+<p><img src="/wp-content/uploads/2013/04/My-Poor-Brain.jpg" alt="My-Poor-Brain" /></p>
+
+<p><a href="http://www.nowyteatr.org/"><strong>Nowy Teatr</strong></a> 特意用行列之间不同的间隔为网站增加了一点小混乱。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Nowy-Teatr.jpg" alt="Nowy-Teatr" /></p>
+
+<p><a href="http://woodwork.nl/"><strong>Woodwork Amsterdam</strong></a> 一列一列地展示视觉信息，和谐地避免了用线。这样也能更好的展示大图。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Woodwork-Amsterdam.jpg" alt="Woodwork-Amsterdam" /></p>
+
+<p><a href="http://www.karlanders.de/"><strong>Karl Anders</strong></a> 大量留白让用户自由呼吸。设计师们把页面协调地分成4列，给每个单元格加上一个大标题和图片描叙。</p>
+
+<p><img src="/wp-content/uploads/2013/04/Karl-Anders.jpg" alt="Karl-Anders" /></p>
+
+<h2 id="section-1">思考</h2>
+
+<p>网格是一个一秒钟变混乱为整洁的整体设计工具，在网页设计领域这样的技能尤为重要。大部分普通用户想简单快速的获取信息，提供良好结构化的数据是首选。但这样并不意味着网站展示就该平淡无趣。即使是再简单的几何图形也能在色彩、图片图形的配合下绚丽夺目。而且，清晰的网格设计能完美地融入各种类型的网站不论你是在线杂志还是创意展示。</p>
+
+<p>那么，你是怎样看这些基于网格的网站设计的？这些精心设计的单元块能够吸引你吗？它只是适合创意设计，还是更适合博客、在线杂志或者资讯类网站？</p>
+
+<p>原文链接：<a href="http://designmodo.com/grid-website-designs/">http://designmodo.com/grid-website-designs/</a></p>
+
+<p>作者：Nataly Birch</p>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start 
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/04/19/grid-website-designs"
+                    data-title="【翻译】精彩网格式网页设计赏析"
+                    data-url="http://1z1b.com/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/04/19/grid-website-designs/"
+                    data-images="http://1z1b.com/img/home-bg.jpg"
+                    data-content="现在大量网页设计基于网格布局。虽说人们通常注意不到它，但杂乱无章的布局时代确实已经过去了，现在是整齐结构化的天下。无论从理论、美学和整齐来说，这样的布局都... | 曾 沙 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/04/09/become-a-better-graphic-designer/" data-toggle="tooltip" data-placement="top" title="【翻译】菜鸟指南——优秀平面设计师是怎样炼成的">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/04/27/how-to-write-web-design-tutorials/" data-toggle="tooltip" data-placement="top" title="【翻译】葵花宝典之怎样编写网页设计和开发教程">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/04/19/grid-website-designs"
+                        data-title="【翻译】精彩网格式网页设计赏析"
+                        data-url="http://1z1b.com/%E7%BF%BB%E8%AF%91/%E8%AE%BE%E8%AE%A1/2013/04/19/grid-website-designs/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#设计" title="设计" rel="3">
+                                    设计
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#读书笔记" title="读书笔记" rel="2">
+                                    读书笔记
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#用户体验" title="用户体验" rel="2">
+                                    用户体验
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#2013" title="2013" rel="2">
+                                    2013
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#总结" title="总结" rel="2">
+                                    总结
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#photoshop" title="photoshop" rel="5">
+                                    photoshop
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#css" title="css" rel="2">
+                                    css
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#logo" title="logo" rel="8">
+                                    logo
+                                </a>
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="2">
+                                    教程
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#扁平化设计" title="扁平化设计" rel="5">
+                                    扁平化设计
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字体" title="字体" rel="2">
+                                    字体
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#东涌" title="东涌" rel="4">
+                                    东涌
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#东西涌穿越" title="东西涌穿越" rel="4">
+                                    东西涌穿越
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#西涌" title="西涌" rel="4">
+                                    西涌
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#字母" title="字母" rel="2">
+                                    字母
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="http://zengsha.me">曾沙</a></li>
+                    
+                        <li><a href="http://1z1b.com">一周一博</a></li>
+                    
+                        <li><a href="https://coding.net">Coding</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = '曾沙';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/zengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/izengsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/happyzsha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/happysha">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 曾 沙 2016
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'zengsha.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
