@@ -1,10 +1,10 @@
 ---
 author: 曾沙
 comments: true
-date: 2016-03-28 11:27:22+00:00
+date: 2016-01-17 11:27:22+00:00
 layout: post
 slug: how-to-save-an-hour-every-day
-title: 今年我要好好种一棵树——浅谈如何构建自己的技能树
+title: 《超级时间整理术：每天多出一小时》读书笔记
 wordpress_id: 5000
 categories:
 - 阅读
