@@ -83,6 +83,9 @@ friends: [
     },{
         title: "Coding",
         href: "https://coding.net"
+    },{
+        title: "丁丁",
+        href: "http://susie.xyz"
     }
 ]
 gems: [jekyll-paginate]
